@@ -1,0 +1,236 @@
+.shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: calc(var(--bar-h) + env(safe-area-inset-top, 0px));
+  padding: env(safe-area-inset-top, 0px) clamp(16px, 2.4vw, 32px) 0;
+  background: color-mix(in srgb, var(--ground) 82%, transparent);
+  backdrop-filter: saturate(1.4) blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: none;
+}
+.brandName {
+  font-weight: 650;
+  font-size: 14.5px;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+.brandName span {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.nav::-webkit-scrollbar {
+  display: none;
+}
+.navItem {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 11px;
+  border-radius: var(--r-md);
+  color: var(--muted);
+  font-weight: 550;
+  font-size: 13.5px;
+  white-space: nowrap;
+  transition:
+    color 0.15s,
+    background 0.15s;
+}
+.navItem:hover {
+  color: var(--ink);
+  background: var(--raised);
+}
+.navItem[aria-current='page'] {
+  color: var(--ink);
+}
+.navItem[aria-current='page']::after {
+  content: '';
+  position: absolute;
+  left: 11px;
+  right: 11px;
+  bottom: -10px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--signal);
+}
+
+.barRight {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.search {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 32px;
+  padding: 0 6px 0 10px;
+  min-width: 240px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 13px;
+  transition: border-color 0.15s;
+}
+.search:hover {
+  border-color: var(--faint);
+}
+.search span {
+  flex: 1;
+  text-align: left;
+}
+.search kbd {
+  padding: 1px 6px;
+  border-radius: 5px;
+  border: 1px solid var(--line);
+  background: var(--raised);
+  font: 500 11px var(--mono);
+  color: var(--ink-2);
+}
+.docs {
+  color: var(--muted);
+  font-weight: 550;
+  font-size: 13px;
+  padding: 0 6px;
+}
+.docs:hover {
+  color: var(--ink);
+}
+.iconBtn {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.iconBtn:hover {
+  color: var(--ink);
+  border-color: var(--faint);
+}
+
+.main {
+  min-width: 0;
+  padding: 28px clamp(16px, 2.4vw, 32px) 56px;
+}
+
+.status {
+  position: sticky;
+  bottom: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: calc(var(--status-h) + env(safe-area-inset-bottom, 0px));
+  padding: 0 clamp(16px, 2.4vw, 32px) env(safe-area-inset-bottom, 0px);
+  border-top: 1px solid var(--line);
+  background: color-mix(in srgb, var(--panel) 92%, transparent);
+  backdrop-filter: blur(10px);
+  font: 11.5px var(--mono);
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+}
+.statusItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.statusSpacer {
+  flex: 1;
+}
+.dotLive,
+.dotDemo {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+.dotLive {
+  background: var(--ok);
+  box-shadow: 0 0 0 3px var(--ok-soft);
+  animation: breathe 2s ease-in-out infinite;
+}
+.dotDemo {
+  background: var(--signal);
+  box-shadow: 0 0 0 3px var(--signal-soft);
+}
+@keyframes breathe {
+  50% {
+    box-shadow: 0 0 0 5px transparent;
+  }
+}
+
+@media (max-width: 1080px) {
+  .search {
+    min-width: 0;
+  }
+  .search span {
+    display: none;
+  }
+}
+@media (max-width: 720px) {
+  .bar {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 6px 12px;
+    padding-top: calc(10px + env(safe-area-inset-top, 0px));
+    padding-bottom: 0;
+  }
+  .brandName span {
+    display: none;
+  }
+  .nav {
+    order: 3;
+    flex-basis: 100%;
+    margin: 0 -8px;
+    padding-bottom: 6px;
+  }
+  .navItem[aria-current='page']::after {
+    bottom: -6px;
+  }
+  .search kbd,
+  .docs {
+    display: none;
+  }
+  .main {
+    padding: 20px 16px 48px;
+  }
+  .status > :nth-child(n + 3) {
+    display: none;
+  }
+  .status > :last-child {
+    display: inline-flex;
+    margin-left: auto;
+  }
+}

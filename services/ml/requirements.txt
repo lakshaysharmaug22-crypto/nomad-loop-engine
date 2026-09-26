@@ -1,0 +1,12 @@
+fastapi==0.115.6
+uvicorn==0.34.0
+numpy>=1.26
+onnxruntime>=1.20
+httpx>=0.28
+# training only
+torch>=2.4
+onnx>=1.17
+scikit-learn>=1.5
+# optional: semantic embeddings for self-healing (downloads all-MiniLM-L6-v2 on first use)
+sentence-transformers>=3.3
+pytest>=8.3

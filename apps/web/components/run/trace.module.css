@@ -1,0 +1,417 @@
+.panel {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+  padding: 14px 16px 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow);
+  min-width: 0;
+}
+
+.kicker {
+  font: 600 11px var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.empty {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  min-height: 200px;
+  align-content: center;
+}
+.empty strong {
+  color: var(--ink);
+  font-size: 15px;
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.stepNo {
+  font: 500 12px var(--mono);
+  color: var(--muted);
+}
+.stepNo span {
+  color: var(--ink);
+  font-weight: 600;
+}
+.time {
+  margin-left: auto;
+  color: var(--faint);
+  font: 11.5px var(--mono);
+}
+
+/* Pipeline: [candidates] wire [rules] wire [ranker] wire [llm]
+                                  ↓ (drop from the exit node)
+             [ action ............................................ ] */
+.pipe {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) 16px minmax(0, 1fr) 16px minmax(0, 1fr) 16px minmax(0, 1fr);
+  grid-template-rows: auto 18px auto;
+  align-items: stretch;
+}
+.source,
+.node {
+  position: relative;
+  display: grid;
+  gap: 3px;
+  align-content: start;
+  padding: 8px 9px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--panel);
+  min-width: 0;
+  transition:
+    border-color 0.25s var(--ease),
+    background 0.25s var(--ease),
+    opacity 0.25s var(--ease);
+}
+.source {
+  background: var(--raised);
+}
+.nodeName {
+  font: 600 10.5px var(--mono);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sourceN {
+  font: 600 22px/1.1 var(--sans);
+  letter-spacing: -0.02em;
+}
+.nodeValue {
+  font: 600 13px var(--mono);
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.nodeNeed {
+  margin-top: -2px;
+  font: 500 10.5px var(--mono);
+  color: var(--faint);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.nodeNote {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--faint);
+  white-space: nowrap;
+}
+.nodeNote em {
+  font: normal 10.5px var(--mono);
+}
+
+.node[data-state='decided'] {
+  border-color: var(--c);
+  background: color-mix(in srgb, var(--c) 10%, var(--panel));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 14%, transparent);
+}
+.node[data-state='decided'] .nodeName,
+.node[data-state='decided'] .nodeNote {
+  color: var(--c);
+}
+.node[data-state='offline'] {
+  border-style: dashed;
+}
+.node[data-state='offline'] .nodeValue {
+  color: var(--faint);
+}
+.node[data-state='skipped'] {
+  opacity: 0.42;
+}
+.ping {
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  border: 2px solid var(--c);
+  animation: ping 0.7s var(--ease) both;
+  pointer-events: none;
+}
+@keyframes ping {
+  from {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.12, 1.3);
+  }
+}
+
+/* Wires: faint dashes when idle, streaming particles when the decision passed through */
+.wire {
+  position: relative;
+  align-self: center;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, var(--line) 0 3px, transparent 3px 6px);
+  overflow: visible;
+}
+.wire[data-active] {
+  height: 4px;
+  background: radial-gradient(circle, var(--ink-2) 1.3px, transparent 1.7px) 0 50% / 7px 4px repeat-x;
+  animation: stream 0.5s linear infinite;
+}
+@keyframes stream {
+  to {
+    background-position: 7px 50%;
+  }
+}
+.burst {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  margin-top: -3.5px;
+  border-radius: 50%;
+  background: var(--signal);
+  box-shadow: 0 0 8px var(--signal-glow);
+  opacity: 0;
+  animation: burst 0.32s var(--ease) both;
+}
+@keyframes burst {
+  0% {
+    opacity: 1;
+    transform: translateX(-4px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+}
+
+.drop {
+  grid-row: 2;
+  grid-column: var(--exit-col);
+  justify-self: center;
+  position: relative;
+  width: 4px;
+  background: radial-gradient(circle, var(--tone) 1.3px, transparent 1.7px) 50% 0 / 4px 6px repeat-y;
+  animation: streamDown 0.45s linear infinite;
+}
+@keyframes streamDown {
+  to {
+    background-position: 50% 6px;
+  }
+}
+.burstDown {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 7px;
+  height: 7px;
+  margin-left: -3.5px;
+  border-radius: 50%;
+  background: var(--tone);
+  box-shadow: 0 0 8px var(--tone);
+  opacity: 0;
+  animation: burstDown 0.3s var(--ease) both;
+}
+@keyframes burstDown {
+  0% {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+.out {
+  grid-row: 3;
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 4px;
+  padding: 11px 12px 12px;
+  border: 1px solid color-mix(in srgb, var(--tone) 55%, var(--line));
+  border-radius: var(--r-md);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--tone) 8%, var(--panel)), var(--panel) 70%);
+}
+.outHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.action {
+  font: 600 16px/1.3 var(--sans);
+  letter-spacing: -0.01em;
+  overflow-wrap: anywhere;
+}
+.verdict {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12.5px;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  margin: 0 -4px;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+.table th {
+  text-align: left;
+  font: 600 10.5px var(--mono);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--faint);
+  padding: 6px 4px;
+  border-bottom: 1px solid var(--line-soft);
+  white-space: nowrap;
+}
+.total {
+  font-weight: 400;
+}
+.table td {
+  padding: 6px 4px;
+  border-bottom: 1px solid var(--line-soft);
+  vertical-align: middle;
+}
+.table tr:last-child td {
+  border-bottom: 0;
+}
+.table td:first-child {
+  max-width: 0;
+  width: 55%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.table tr[data-chosen] td {
+  background: var(--signal-soft);
+}
+.table tr[data-chosen] td:first-child {
+  box-shadow: inset 2px 0 0 var(--signal);
+}
+.kind {
+  display: inline-block;
+  margin: 0 6px;
+  padding: 0 5px;
+  border-radius: 4px;
+  font: 10.5px/16px var(--mono);
+  color: var(--muted);
+  background: var(--raised);
+  vertical-align: 1px;
+}
+.label {
+  display: inline;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 96px;
+}
+.track {
+  position: relative;
+  flex: 1;
+  height: 5px;
+  border-radius: 3px;
+  background: var(--sunken);
+}
+.fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 3px;
+  transition: width 0.5s var(--ease);
+}
+.threshold {
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  width: 1.5px;
+  background: var(--ink-2);
+}
+.value {
+  font: 11.5px var(--mono);
+  color: var(--ink-2);
+  min-width: 38px;
+  text-align: right;
+}
+.value[data-negative] {
+  color: var(--faint);
+}
+.na {
+  color: var(--faint);
+}
+
+.heal {
+  display: grid;
+  gap: 2px;
+  padding: 10px 12px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--line);
+  background: var(--raised);
+  font-size: 12.5px;
+}
+.heal span {
+  color: var(--muted);
+}
+.heal[data-strategy='healed'] {
+  border-color: color-mix(in srgb, var(--ok) 45%, var(--line));
+  background: var(--ok-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wire[data-active],
+  .drop {
+    animation: none;
+  }
+  .burst,
+  .burstDown,
+  .ping {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .pipe {
+    grid-template-columns: minmax(0, 1fr) 8px minmax(0, 1fr) 8px minmax(0, 1fr) 8px minmax(0, 1fr);
+  }
+  .source,
+  .node {
+    padding: 7px 6px;
+  }
+  .nodeName {
+    font-size: 9px;
+    letter-spacing: 0;
+  }
+  .nodeValue {
+    font-size: 12px;
+  }
+  .nodeNeed {
+    font-size: 9.5px;
+  }
+  .nodeNote em {
+    display: none;
+  }
+  .sourceN {
+    font-size: 18px;
+  }
+  .bar {
+    min-width: 64px;
+  }
+  .value {
+    min-width: 30px;
+  }
+}

@@ -1,0 +1,1862 @@
+{
+  "policies": {
+    "steps": 45,
+    "manifestSize": 10,
+    "runs": [
+      {
+        "policy": "random",
+        "label": "random-1",
+        "stats": {
+          "steps": 45,
+          "states": 13,
+          "edges": 45,
+          "bugs": 5,
+          "tierCounts": {
+            "heuristic": 0,
+            "ranker": 0,
+            "llm": 0,
+            "fallback": 45
+          },
+          "heals": {
+            "exact": 45,
+            "healed": 0,
+            "failed": 0
+          },
+          "llmCalls": 0,
+          "elapsedMs": 57382,
+          "stepP50Ms": 598,
+          "stepP95Ms": 4100
+        },
+        "bugSteps": [
+          0,
+          0,
+          7,
+          9,
+          19
+        ],
+        "stateSteps": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          9,
+          10,
+          11,
+          19,
+          34,
+          38
+        ],
+        "recall": 0.5,
+        "recallRules": 0.5555555555555556,
+        "precision": 1,
+        "missed": [
+          "B01",
+          "B03",
+          "B04",
+          "B07",
+          "B08"
+        ],
+        "bugs": [
+          {
+            "id": "NLE-001",
+            "title": "Broken image on /",
+            "severity": "minor",
+            "type": "broken_image",
+            "foundAtStep": 0,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-002",
+            "title": "Slow API response on /",
+            "severity": "minor",
+            "type": "slow_response",
+            "foundAtStep": 0,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-003",
+            "title": "Suspicious text on /newsletter after “Subscribe”",
+            "severity": "major",
+            "type": "suspicious_text",
+            "foundAtStep": 7,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-004",
+            "title": "Console error on /search",
+            "severity": "minor",
+            "type": "console_error",
+            "foundAtStep": 9,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-005",
+            "title": "Broken link on /careers",
+            "severity": "major",
+            "type": "broken_link",
+            "foundAtStep": 19,
+            "status": "confirmed"
+          }
+        ]
+      },
+      {
+        "policy": "random",
+        "label": "random-2",
+        "stats": {
+          "steps": 45,
+          "states": 14,
+          "edges": 45,
+          "bugs": 6,
+          "tierCounts": {
+            "heuristic": 0,
+            "ranker": 0,
+            "llm": 0,
+            "fallback": 45
+          },
+          "heals": {
+            "exact": 45,
+            "healed": 0,
+            "failed": 0
+          },
+          "llmCalls": 0,
+          "elapsedMs": 64857,
+          "stepP50Ms": 601,
+          "stepP95Ms": 4095
+        },
+        "bugSteps": [
+          0,
+          0,
+          6,
+          8,
+          19,
+          22
+        ],
+        "stateSteps": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          16,
+          19,
+          32,
+          37,
+          39
+        ],
+        "recall": 0.6,
+        "recallRules": 0.6666666666666666,
+        "precision": 1,
+        "missed": [
+          "B01",
+          "B03",
+          "B04",
+          "B08"
+        ],
+        "bugs": [
+          {
+            "id": "NLE-001",
+            "title": "Broken image on /",
+            "severity": "minor",
+            "type": "broken_image",
+            "foundAtStep": 0,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-002",
+            "title": "Slow API response on /",
+            "severity": "minor",
+            "type": "slow_response",
+            "foundAtStep": 0,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-003",
+            "title": "Broken link on /careers",
+            "severity": "major",
+            "type": "broken_link",
+            "foundAtStep": 6,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-004",
+            "title": "Console error on /search",
+            "severity": "minor",
+            "type": "console_error",
+            "foundAtStep": 8,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-005",
+            "title": "Suspicious text on /newsletter after “Subscribe”",
+            "severity": "major",
+            "type": "suspicious_text",
+            "foundAtStep": 19,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-006",
+            "title": "Uncaught exception on /cart after “Apply coupon”",
+            "severity": "critical",
+            "type": "page_error",
+            "foundAtStep": 22,
+            "status": "confirmed"
+          }
+        ]
+      },
+      {
+        "policy": "random",
+        "label": "random-3",
+        "stats": {
+          "steps": 45,
+          "states": 14,
+          "edges": 45,
+          "bugs": 6,
+          "tierCounts": {
+            "heuristic": 0,
+            "ranker": 0,
+            "llm": 0,
+            "fallback": 45
+          },
+          "heals": {
+            "exact": 45,
+            "healed": 0,
+            "failed": 0
+          },
+          "llmCalls": 0,
+          "elapsedMs": 57939,
+          "stepP50Ms": 592,
+          "stepP95Ms": 4097
+        },
+        "bugSteps": [
+          0,
+          0,
+          2,
+          4,
+          8,
+          25
+        ],
+        "stateSteps": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          9,
+          12,
+          23,
+          25,
+          27,
+          33,
+          39
+        ],
+        "recall": 0.6,
+        "recallRules": 0.6666666666666666,
+        "precision": 1,
+        "missed": [
+          "B01",
+          "B03",
+          "B04",
+          "B08"
+        ],
+        "bugs": [
+          {
+            "id": "NLE-001",
+            "title": "Broken image on /",
+            "severity": "minor",
+            "type": "broken_image",
+            "foundAtStep": 0,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-002",
+            "title": "Slow API response on /",
+            "severity": "minor",
+            "type": "slow_response",
+            "foundAtStep": 0,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-003",
+            "title": "Console error on /search",
+            "severity": "minor",
+            "type": "console_error",
+            "foundAtStep": 2,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-004",
+            "title": "Suspicious text on /newsletter after “Subscribe”",
+            "severity": "major",
+            "type": "suspicious_text",
+            "foundAtStep": 4,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-005",
+            "title": "Uncaught exception on /cart after “Apply coupon”",
+            "severity": "critical",
+            "type": "page_error",
+            "foundAtStep": 8,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-006",
+            "title": "Broken link on /careers",
+            "severity": "major",
+            "type": "broken_link",
+            "foundAtStep": 25,
+            "status": "confirmed"
+          }
+        ]
+      },
+      {
+        "policy": "random",
+        "label": "random-4",
+        "stats": {
+          "steps": 45,
+          "states": 16,
+          "edges": 45,
+          "bugs": 6,
+          "tierCounts": {
+            "heuristic": 0,
+            "ranker": 0,
+            "llm": 0,
+            "fallback": 45
+          },
+          "heals": {
+            "exact": 45,
+            "healed": 0,
+            "failed": 0
+          },
+          "llmCalls": 0,
+          "elapsedMs": 61662,
+          "stepP50Ms": 595,
+          "stepP95Ms": 4082
+        },
+        "bugSteps": [
+          0,
+          0,
+          1,
+          8,
+          21,
+          25
+        ],
+        "stateSteps": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          7,
+          8,
+          10,
+          11,
+          14,
+          15,
+          21,
+          25,
+          33,
+          37,
+          41
+        ],
+        "recall": 0.6,
+        "recallRules": 0.6666666666666666,
+        "precision": 1,
+        "missed": [
+          "B03",
+          "B04",
+          "B07",
+          "B08"
+        ],
+        "bugs": [
+          {
+            "id": "NLE-001",
+            "title": "Broken image on /",
+            "severity": "minor",
+            "type": "broken_image",
+            "foundAtStep": 0,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-002",
+            "title": "Slow API response on /",
+            "severity": "minor",
+            "type": "slow_response",
+            "foundAtStep": 0,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-003",
+            "title": "Server error on /product/4",
+            "severity": "critical",
+            "type": "server_error",
+            "foundAtStep": 1,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-004",
+            "title": "Suspicious text on /newsletter after “Subscribe”",
+            "severity": "major",
+            "type": "suspicious_text",
+            "foundAtStep": 8,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-005",
+            "title": "Console error on /search",
+            "severity": "minor",
+            "type": "console_error",
+            "foundAtStep": 21,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-006",
+            "title": "Broken link on /careers",
+            "severity": "major",
+            "type": "broken_link",
+            "foundAtStep": 25,
+            "status": "confirmed"
+          }
+        ]
+      },
+      {
+        "policy": "random",
+        "label": "random-5",
+        "stats": {
+          "steps": 45,
+          "states": 14,
+          "edges": 45,
+          "bugs": 6,
+          "tierCounts": {
+            "heuristic": 0,
+            "ranker": 0,
+            "llm": 0,
+            "fallback": 45
+          },
+          "heals": {
+            "exact": 45,
+            "healed": 0,
+            "failed": 0
+          },
+          "llmCalls": 0,
+          "elapsedMs": 65057,
+          "stepP50Ms": 598,
+          "stepP95Ms": 4094
+        },
+        "bugSteps": [
+          0,
+          0,
+          1,
+          3,
+          12,
+          16
+        ],
+        "stateSteps": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          9,
+          10,
+          12,
+          16,
+          19,
+          32,
+          38,
+          42
+        ],
+        "recall": 0.6,
+        "recallRules": 0.6666666666666666,
+        "precision": 1,
+        "missed": [
+          "B03",
+          "B04",
+          "B07",
+          "B08"
+        ],
+        "bugs": [
+          {
+            "id": "NLE-001",
+            "title": "Broken image on /",
+            "severity": "minor",
+            "type": "broken_image",
+            "foundAtStep": 0,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-002",
+            "title": "Slow API response on /",
+            "severity": "minor",
+            "type": "slow_response",
+            "foundAtStep": 0,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-003",
+            "title": "Server error on /product/4",
+            "severity": "critical",
+            "type": "server_error",
+            "foundAtStep": 1,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-004",
+            "title": "Console error on /search",
+            "severity": "minor",
+            "type": "console_error",
+            "foundAtStep": 3,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-005",
+            "title": "Broken link on /careers",
+            "severity": "major",
+            "type": "broken_link",
+            "foundAtStep": 12,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-006",
+            "title": "Suspicious text on /newsletter after “Subscribe”",
+            "severity": "major",
+            "type": "suspicious_text",
+            "foundAtStep": 16,
+            "status": "confirmed"
+          }
+        ]
+      },
+      {
+        "policy": "rules",
+        "label": "rules-1",
+        "stats": {
+          "steps": 45,
+          "states": 19,
+          "edges": 45,
+          "bugs": 9,
+          "tierCounts": {
+            "heuristic": 8,
+            "ranker": 0,
+            "llm": 0,
+            "fallback": 37
+          },
+          "heals": {
+            "exact": 45,
+            "healed": 0,
+            "failed": 0
+          },
+          "llmCalls": 0,
+          "elapsedMs": 57009,
+          "stepP50Ms": 595,
+          "stepP95Ms": 2506
+        },
+        "bugSteps": [
+          0,
+          0,
+          3,
+          6,
+          7,
+          23,
+          25,
+          35,
+          36
+        ],
+        "stateSteps": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          12,
+          14,
+          17,
+          18,
+          19,
+          21,
+          22,
+          25,
+          26,
+          35
+        ],
+        "recall": 0.9,
+        "recallRules": 1,
+        "precision": 1,
+        "missed": [
+          "B04"
+        ],
+        "bugs": [
+          {
+            "id": "NLE-001",
+            "title": "Broken image on /",
+            "severity": "minor",
+            "type": "broken_image",
+            "foundAtStep": 0,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-002",
+            "title": "Slow API response on /",
+            "severity": "minor",
+            "type": "slow_response",
+            "foundAtStep": 0,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-003",
+            "title": "Broken link on /careers",
+            "severity": "major",
+            "type": "broken_link",
+            "foundAtStep": 3,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-004",
+            "title": "Suspicious text on /newsletter after “Subscribe”",
+            "severity": "major",
+            "type": "suspicious_text",
+            "foundAtStep": 6,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-005",
+            "title": "Console error on /search",
+            "severity": "minor",
+            "type": "console_error",
+            "foundAtStep": 7,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-006",
+            "title": "Failed API request on /product/3 after “Add to cart”",
+            "severity": "major",
+            "type": "network_failure",
+            "foundAtStep": 23,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-007",
+            "title": "Server error on /product/4",
+            "severity": "critical",
+            "type": "server_error",
+            "foundAtStep": 25,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-008",
+            "title": "Suspicious text on /cart",
+            "severity": "major",
+            "type": "suspicious_text",
+            "foundAtStep": 35,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-009",
+            "title": "Uncaught exception on /cart after “Apply coupon”",
+            "severity": "critical",
+            "type": "page_error",
+            "foundAtStep": 36,
+            "status": "confirmed"
+          }
+        ]
+      },
+      {
+        "policy": "rules",
+        "label": "rules-2",
+        "stats": {
+          "steps": 45,
+          "states": 19,
+          "edges": 45,
+          "bugs": 9,
+          "tierCounts": {
+            "heuristic": 8,
+            "ranker": 0,
+            "llm": 0,
+            "fallback": 37
+          },
+          "heals": {
+            "exact": 45,
+            "healed": 0,
+            "failed": 0
+          },
+          "llmCalls": 0,
+          "elapsedMs": 58275,
+          "stepP50Ms": 604,
+          "stepP95Ms": 2511
+        },
+        "bugSteps": [
+          0,
+          0,
+          3,
+          6,
+          7,
+          23,
+          25,
+          35,
+          36
+        ],
+        "stateSteps": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          12,
+          14,
+          17,
+          18,
+          19,
+          21,
+          22,
+          25,
+          26,
+          35
+        ],
+        "recall": 0.9,
+        "recallRules": 1,
+        "precision": 1,
+        "missed": [
+          "B04"
+        ],
+        "bugs": [
+          {
+            "id": "NLE-001",
+            "title": "Broken image on /",
+            "severity": "minor",
+            "type": "broken_image",
+            "foundAtStep": 0,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-002",
+            "title": "Slow API response on /",
+            "severity": "minor",
+            "type": "slow_response",
+            "foundAtStep": 0,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-003",
+            "title": "Broken link on /careers",
+            "severity": "major",
+            "type": "broken_link",
+            "foundAtStep": 3,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-004",
+            "title": "Suspicious text on /newsletter after “Subscribe”",
+            "severity": "major",
+            "type": "suspicious_text",
+            "foundAtStep": 6,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-005",
+            "title": "Console error on /search",
+            "severity": "minor",
+            "type": "console_error",
+            "foundAtStep": 7,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-006",
+            "title": "Failed API request on /product/3 after “Add to cart”",
+            "severity": "major",
+            "type": "network_failure",
+            "foundAtStep": 23,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-007",
+            "title": "Server error on /product/4",
+            "severity": "critical",
+            "type": "server_error",
+            "foundAtStep": 25,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-008",
+            "title": "Suspicious text on /cart",
+            "severity": "major",
+            "type": "suspicious_text",
+            "foundAtStep": 35,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-009",
+            "title": "Uncaught exception on /cart after “Apply coupon”",
+            "severity": "critical",
+            "type": "page_error",
+            "foundAtStep": 36,
+            "status": "confirmed"
+          }
+        ]
+      },
+      {
+        "policy": "rules",
+        "label": "rules-3",
+        "stats": {
+          "steps": 45,
+          "states": 19,
+          "edges": 45,
+          "bugs": 9,
+          "tierCounts": {
+            "heuristic": 8,
+            "ranker": 0,
+            "llm": 0,
+            "fallback": 37
+          },
+          "heals": {
+            "exact": 45,
+            "healed": 0,
+            "failed": 0
+          },
+          "llmCalls": 0,
+          "elapsedMs": 57335,
+          "stepP50Ms": 595,
+          "stepP95Ms": 2474
+        },
+        "bugSteps": [
+          0,
+          0,
+          3,
+          6,
+          7,
+          23,
+          25,
+          35,
+          36
+        ],
+        "stateSteps": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          12,
+          14,
+          17,
+          18,
+          19,
+          21,
+          22,
+          25,
+          26,
+          35
+        ],
+        "recall": 0.9,
+        "recallRules": 1,
+        "precision": 1,
+        "missed": [
+          "B04"
+        ],
+        "bugs": [
+          {
+            "id": "NLE-001",
+            "title": "Broken image on /",
+            "severity": "minor",
+            "type": "broken_image",
+            "foundAtStep": 0,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-002",
+            "title": "Slow API response on /",
+            "severity": "minor",
+            "type": "slow_response",
+            "foundAtStep": 0,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-003",
+            "title": "Broken link on /careers",
+            "severity": "major",
+            "type": "broken_link",
+            "foundAtStep": 3,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-004",
+            "title": "Suspicious text on /newsletter after “Subscribe”",
+            "severity": "major",
+            "type": "suspicious_text",
+            "foundAtStep": 6,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-005",
+            "title": "Console error on /search",
+            "severity": "minor",
+            "type": "console_error",
+            "foundAtStep": 7,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-006",
+            "title": "Failed API request on /product/3 after “Add to cart”",
+            "severity": "major",
+            "type": "network_failure",
+            "foundAtStep": 23,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-007",
+            "title": "Server error on /product/4",
+            "severity": "critical",
+            "type": "server_error",
+            "foundAtStep": 25,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-008",
+            "title": "Suspicious text on /cart",
+            "severity": "major",
+            "type": "suspicious_text",
+            "foundAtStep": 35,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-009",
+            "title": "Uncaught exception on /cart after “Apply coupon”",
+            "severity": "critical",
+            "type": "page_error",
+            "foundAtStep": 36,
+            "status": "confirmed"
+          }
+        ]
+      },
+      {
+        "policy": "rules → ranker → llm",
+        "label": "hybrid-1",
+        "stats": {
+          "steps": 45,
+          "states": 19,
+          "edges": 45,
+          "bugs": 9,
+          "tierCounts": {
+            "heuristic": 6,
+            "ranker": 18,
+            "llm": 0,
+            "fallback": 21
+          },
+          "heals": {
+            "exact": 45,
+            "healed": 0,
+            "failed": 0
+          },
+          "llmCalls": 0,
+          "elapsedMs": 55144,
+          "stepP50Ms": 616,
+          "stepP95Ms": 2059
+        },
+        "bugSteps": [
+          0,
+          0,
+          5,
+          6,
+          9,
+          10,
+          15,
+          18,
+          30
+        ],
+        "stateSteps": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          13,
+          14,
+          27,
+          29,
+          30,
+          33,
+          41
+        ],
+        "recall": 0.9,
+        "recallRules": 1,
+        "precision": 1,
+        "missed": [
+          "B04"
+        ],
+        "bugs": [
+          {
+            "id": "NLE-001",
+            "title": "Broken image on /",
+            "severity": "minor",
+            "type": "broken_image",
+            "foundAtStep": 0,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-002",
+            "title": "Slow API response on /",
+            "severity": "minor",
+            "type": "slow_response",
+            "foundAtStep": 0,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-003",
+            "title": "Broken link on /careers",
+            "severity": "major",
+            "type": "broken_link",
+            "foundAtStep": 5,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-004",
+            "title": "Suspicious text on /newsletter after “Subscribe”",
+            "severity": "major",
+            "type": "suspicious_text",
+            "foundAtStep": 6,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-005",
+            "title": "Console error on /search",
+            "severity": "minor",
+            "type": "console_error",
+            "foundAtStep": 9,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-006",
+            "title": "Server error on /product/4",
+            "severity": "critical",
+            "type": "server_error",
+            "foundAtStep": 10,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-007",
+            "title": "Failed API request on /product/3 after “Add to cart”",
+            "severity": "major",
+            "type": "network_failure",
+            "foundAtStep": 15,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-008",
+            "title": "Uncaught exception on /cart after “Apply coupon”",
+            "severity": "critical",
+            "type": "page_error",
+            "foundAtStep": 18,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-009",
+            "title": "Suspicious text on /cart",
+            "severity": "major",
+            "type": "suspicious_text",
+            "foundAtStep": 30,
+            "status": "confirmed"
+          }
+        ]
+      },
+      {
+        "policy": "rules → ranker → llm",
+        "label": "hybrid-2",
+        "stats": {
+          "steps": 45,
+          "states": 19,
+          "edges": 45,
+          "bugs": 9,
+          "tierCounts": {
+            "heuristic": 6,
+            "ranker": 18,
+            "llm": 0,
+            "fallback": 21
+          },
+          "heals": {
+            "exact": 45,
+            "healed": 0,
+            "failed": 0
+          },
+          "llmCalls": 0,
+          "elapsedMs": 53895,
+          "stepP50Ms": 607,
+          "stepP95Ms": 2059
+        },
+        "bugSteps": [
+          0,
+          0,
+          5,
+          6,
+          9,
+          10,
+          15,
+          18,
+          30
+        ],
+        "stateSteps": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          13,
+          14,
+          27,
+          29,
+          30,
+          33,
+          41
+        ],
+        "recall": 0.9,
+        "recallRules": 1,
+        "precision": 1,
+        "missed": [
+          "B04"
+        ],
+        "bugs": [
+          {
+            "id": "NLE-001",
+            "title": "Broken image on /",
+            "severity": "minor",
+            "type": "broken_image",
+            "foundAtStep": 0,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-002",
+            "title": "Slow API response on /",
+            "severity": "minor",
+            "type": "slow_response",
+            "foundAtStep": 0,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-003",
+            "title": "Broken link on /careers",
+            "severity": "major",
+            "type": "broken_link",
+            "foundAtStep": 5,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-004",
+            "title": "Suspicious text on /newsletter after “Subscribe”",
+            "severity": "major",
+            "type": "suspicious_text",
+            "foundAtStep": 6,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-005",
+            "title": "Console error on /search",
+            "severity": "minor",
+            "type": "console_error",
+            "foundAtStep": 9,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-006",
+            "title": "Server error on /product/4",
+            "severity": "critical",
+            "type": "server_error",
+            "foundAtStep": 10,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-007",
+            "title": "Failed API request on /product/3 after “Add to cart”",
+            "severity": "major",
+            "type": "network_failure",
+            "foundAtStep": 15,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-008",
+            "title": "Uncaught exception on /cart after “Apply coupon”",
+            "severity": "critical",
+            "type": "page_error",
+            "foundAtStep": 18,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-009",
+            "title": "Suspicious text on /cart",
+            "severity": "major",
+            "type": "suspicious_text",
+            "foundAtStep": 30,
+            "status": "confirmed"
+          }
+        ]
+      },
+      {
+        "policy": "rules → ranker → llm",
+        "label": "hybrid-3",
+        "stats": {
+          "steps": 45,
+          "states": 19,
+          "edges": 45,
+          "bugs": 9,
+          "tierCounts": {
+            "heuristic": 6,
+            "ranker": 18,
+            "llm": 0,
+            "fallback": 21
+          },
+          "heals": {
+            "exact": 45,
+            "healed": 0,
+            "failed": 0
+          },
+          "llmCalls": 0,
+          "elapsedMs": 55053,
+          "stepP50Ms": 610,
+          "stepP95Ms": 2131
+        },
+        "bugSteps": [
+          0,
+          0,
+          5,
+          6,
+          9,
+          10,
+          15,
+          18,
+          30
+        ],
+        "stateSteps": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          13,
+          14,
+          27,
+          29,
+          30,
+          33,
+          41
+        ],
+        "recall": 0.9,
+        "recallRules": 1,
+        "precision": 1,
+        "missed": [
+          "B04"
+        ],
+        "bugs": [
+          {
+            "id": "NLE-001",
+            "title": "Broken image on /",
+            "severity": "minor",
+            "type": "broken_image",
+            "foundAtStep": 0,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-002",
+            "title": "Slow API response on /",
+            "severity": "minor",
+            "type": "slow_response",
+            "foundAtStep": 0,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-003",
+            "title": "Broken link on /careers",
+            "severity": "major",
+            "type": "broken_link",
+            "foundAtStep": 5,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-004",
+            "title": "Suspicious text on /newsletter after “Subscribe”",
+            "severity": "major",
+            "type": "suspicious_text",
+            "foundAtStep": 6,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-005",
+            "title": "Console error on /search",
+            "severity": "minor",
+            "type": "console_error",
+            "foundAtStep": 9,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-006",
+            "title": "Server error on /product/4",
+            "severity": "critical",
+            "type": "server_error",
+            "foundAtStep": 10,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-007",
+            "title": "Failed API request on /product/3 after “Add to cart”",
+            "severity": "major",
+            "type": "network_failure",
+            "foundAtStep": 15,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-008",
+            "title": "Uncaught exception on /cart after “Apply coupon”",
+            "severity": "critical",
+            "type": "page_error",
+            "foundAtStep": 18,
+            "status": "confirmed"
+          },
+          {
+            "id": "NLE-009",
+            "title": "Suspicious text on /cart",
+            "severity": "major",
+            "type": "suspicious_text",
+            "foundAtStep": 30,
+            "status": "confirmed"
+          }
+        ]
+      }
+    ]
+  },
+  "ranker": {
+    "rows": 885,
+    "runs": 17,
+    "split_rows": {
+      "train": 570,
+      "val": 150,
+      "test": 165
+    },
+    "positive_rate": 0.307,
+    "train_auc": 0.997,
+    "val_auc": 0.995,
+    "test_auc": 0.995,
+    "baseline_best_single_feature": {
+      "feature": "name_length",
+      "test_auc": 0.654
+    },
+    "test_base_rate": 0.273,
+    "test_precision_at_0.55": 0.898,
+    "epochs_run": 400,
+    "roc_test": [
+      [
+        0,
+        0
+      ],
+      [
+        0.0083,
+        0.8889
+      ],
+      [
+        0.0083,
+        0.8889
+      ],
+      [
+        0.0167,
+        0.8889
+      ],
+      [
+        0.025,
+        0.8889
+      ],
+      [
+        0.025,
+        0.8889
+      ],
+      [
+        0.0333,
+        0.8889
+      ],
+      [
+        0.0417,
+        0.9111
+      ],
+      [
+        0.0417,
+        0.9111
+      ],
+      [
+        0.0417,
+        0.9333
+      ],
+      [
+        0.0417,
+        0.9333
+      ],
+      [
+        0.0417,
+        0.9778
+      ],
+      [
+        0.0417,
+        0.9778
+      ],
+      [
+        0.0417,
+        0.9778
+      ],
+      [
+        0.0417,
+        0.9778
+      ],
+      [
+        0.0417,
+        0.9778
+      ],
+      [
+        0.0417,
+        0.9778
+      ],
+      [
+        0.0417,
+        0.9778
+      ],
+      [
+        0.0417,
+        0.9778
+      ],
+      [
+        0.05,
+        0.9778
+      ],
+      [
+        0.05,
+        0.9778
+      ],
+      [
+        0.05,
+        1
+      ],
+      [
+        0.05,
+        1
+      ],
+      [
+        0.05,
+        1
+      ],
+      [
+        0.05,
+        1
+      ],
+      [
+        0.05,
+        1
+      ],
+      [
+        0.05,
+        1
+      ],
+      [
+        0.05,
+        1
+      ],
+      [
+        0.05,
+        1
+      ],
+      [
+        0.05,
+        1
+      ],
+      [
+        0.05,
+        1
+      ],
+      [
+        0.05,
+        1
+      ],
+      [
+        0.05,
+        1
+      ],
+      [
+        0.05,
+        1
+      ],
+      [
+        0.05,
+        1
+      ],
+      [
+        0.0583,
+        1
+      ],
+      [
+        0.075,
+        1
+      ],
+      [
+        0.1083,
+        1
+      ],
+      [
+        0.175,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "calibration_test": [
+      {
+        "bin": [
+          0,
+          0.2
+        ],
+        "predicted": 0.008,
+        "observed": 0,
+        "n": 114
+      },
+      {
+        "bin": [
+          0.4,
+          0.6
+        ],
+        "predicted": 0.491,
+        "observed": 0.5,
+        "n": 2
+      },
+      {
+        "bin": [
+          0.6,
+          0.8
+        ],
+        "predicted": 0.743,
+        "observed": 1,
+        "n": 3
+      },
+      {
+        "bin": [
+          0.8,
+          1
+        ],
+        "predicted": 0.983,
+        "observed": 0.891,
+        "n": 46
+      }
+    ],
+    "importance_test": [
+      {
+        "feature": "key_global_use",
+        "auc_drop": 0.1881
+      },
+      {
+        "feature": "target_path_unseen",
+        "auc_drop": 0.1571
+      },
+      {
+        "feature": "verb_submit",
+        "auc_drop": 0.0543
+      },
+      {
+        "feature": "kind_link",
+        "auc_drop": 0.046
+      },
+      {
+        "feature": "has_required_fields",
+        "auc_drop": 0.0439
+      },
+      {
+        "feature": "verb_commerce",
+        "auc_drop": 0.024
+      },
+      {
+        "feature": "kind_form",
+        "auc_drop": 0.0216
+      },
+      {
+        "feature": "target_path_depth",
+        "auc_drop": 0.0093
+      },
+      {
+        "feature": "kind_form_empty",
+        "auc_drop": 0.0066
+      },
+      {
+        "feature": "steps_since_new_state",
+        "auc_drop": 0.0023
+      },
+      {
+        "feature": "verb_detail",
+        "auc_drop": 0.001
+      },
+      {
+        "feature": "verb_generic_nav",
+        "auc_drop": 0.0005
+      },
+      {
+        "feature": "in_nav_or_footer",
+        "auc_drop": 0.0001
+      },
+      {
+        "feature": "target_has_query",
+        "auc_drop": 0
+      },
+      {
+        "feature": "verb_destructive",
+        "auc_drop": 0
+      },
+      {
+        "feature": "n_fields",
+        "auc_drop": 0
+      },
+      {
+        "feature": "name_length",
+        "auc_drop": -0.0001
+      },
+      {
+        "feature": "position",
+        "auc_drop": -0.0001
+      },
+      {
+        "feature": "n_candidates",
+        "auc_drop": -0.0002
+      },
+      {
+        "feature": "state_visits",
+        "auc_drop": -0.0007
+      },
+      {
+        "feature": "kind_button",
+        "auc_drop": -0.0017
+      }
+    ],
+    "features": [
+      "kind_link",
+      "kind_button",
+      "kind_form",
+      "kind_form_empty",
+      "target_path_unseen",
+      "target_path_depth",
+      "target_has_query",
+      "in_nav_or_footer",
+      "name_length",
+      "verb_commerce",
+      "verb_submit",
+      "verb_destructive",
+      "verb_generic_nav",
+      "verb_detail",
+      "n_fields",
+      "has_required_fields",
+      "key_global_use",
+      "state_visits",
+      "steps_since_new_state",
+      "position",
+      "n_candidates"
+    ]
+  },
+  "generatedAt": "2026-09-26T12:53:47.269Z",
+  "ml": "on",
+  "demo": {
+    "policy": "rules → ranker → llm",
+    "label": "demo",
+    "stats": {
+      "steps": 45,
+      "states": 19,
+      "edges": 45,
+      "bugs": 9,
+      "tierCounts": {
+        "heuristic": 6,
+        "ranker": 18,
+        "llm": 0,
+        "fallback": 21
+      },
+      "heals": {
+        "exact": 45,
+        "healed": 0,
+        "failed": 0
+      },
+      "llmCalls": 0,
+      "elapsedMs": 83617,
+      "stepP50Ms": 657,
+      "stepP95Ms": 4027
+    },
+    "bugSteps": [
+      0,
+      0,
+      5,
+      6,
+      9,
+      10,
+      15,
+      18,
+      30
+    ],
+    "stateSteps": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14,
+      27,
+      29,
+      30,
+      33,
+      41
+    ],
+    "recall": 0.9,
+    "recallRules": 1,
+    "precision": 1,
+    "missed": [
+      "B04"
+    ],
+    "bugs": [
+      {
+        "id": "NLE-001",
+        "title": "Broken image on /",
+        "severity": "minor",
+        "type": "broken_image",
+        "foundAtStep": 0,
+        "status": "confirmed"
+      },
+      {
+        "id": "NLE-002",
+        "title": "Slow API response on /",
+        "severity": "minor",
+        "type": "slow_response",
+        "foundAtStep": 0,
+        "status": "confirmed"
+      },
+      {
+        "id": "NLE-003",
+        "title": "Broken link on /careers",
+        "severity": "major",
+        "type": "broken_link",
+        "foundAtStep": 5,
+        "status": "confirmed"
+      },
+      {
+        "id": "NLE-004",
+        "title": "Suspicious text on /newsletter after “Subscribe”",
+        "severity": "major",
+        "type": "suspicious_text",
+        "foundAtStep": 6,
+        "status": "confirmed"
+      },
+      {
+        "id": "NLE-005",
+        "title": "Console error on /search",
+        "severity": "minor",
+        "type": "console_error",
+        "foundAtStep": 9,
+        "status": "confirmed"
+      },
+      {
+        "id": "NLE-006",
+        "title": "Server error on /product/4",
+        "severity": "critical",
+        "type": "server_error",
+        "foundAtStep": 10,
+        "status": "confirmed"
+      },
+      {
+        "id": "NLE-007",
+        "title": "Failed API request on /product/3 after “Add to cart”",
+        "severity": "major",
+        "type": "network_failure",
+        "foundAtStep": 15,
+        "status": "confirmed"
+      },
+      {
+        "id": "NLE-008",
+        "title": "Uncaught exception on /cart after “Apply coupon”",
+        "severity": "critical",
+        "type": "page_error",
+        "foundAtStep": 18,
+        "status": "confirmed"
+      },
+      {
+        "id": "NLE-009",
+        "title": "Suspicious text on /cart",
+        "severity": "major",
+        "type": "suspicious_text",
+        "foundAtStep": 30,
+        "status": "confirmed"
+      }
+    ]
+  },
+  "heal": {
+    "embedder": "hashing-ngram (offline fallback)",
+    "targets": 91,
+    "naiveResolved": 40,
+    "healingResolved": 91,
+    "naiveBreakRate": 0.56,
+    "healingBreakRate": 0,
+    "wrongElement": 0,
+    "abstained": 0,
+    "healedSemantically": 20
+  },
+  "sweeps": [
+    {
+      "label": "Redesign",
+      "items": 9,
+      "stillBroken": 9,
+      "fixed": 0
+    },
+    {
+      "label": "Fixed build",
+      "items": 9,
+      "stillBroken": 0,
+      "fixed": 9
+    }
+  ],
+  "clean": {
+    "steps": 45,
+    "states": 18,
+    "bugs": 0,
+    "reports": []
+  }
+}

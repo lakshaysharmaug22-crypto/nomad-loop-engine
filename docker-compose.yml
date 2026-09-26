@@ -1,0 +1,66 @@
+# Production-shaped local stack: Postgres, Redis/BullMQ, API, ML service, dashboard, and the seeded targets.
+# The LLM runs in Ollama on the host (GPU/Metal access is simpler there):
+#   ollama pull qwen2.5:3b-instruct      # or LLM_MODEL=qwen2.5:7b-instruct with 8 GB+ VRAM
+#   docker compose up --build
+# Dashboard: http://localhost:3000 · API docs: http://localhost:8100/docs
+# Inside the compose network the target is http://buggy-shop:4100.
+services:
+  postgres:
+    image: postgres:16
+    environment: { POSTGRES_USER: nomad, POSTGRES_PASSWORD: nomad, POSTGRES_DB: nomad }
+    volumes: [pg:/var/lib/postgresql/data]
+    healthcheck: { test: ['CMD', 'pg_isready', '-U', 'nomad'], interval: 5s, retries: 10 }
+
+  redis:
+    image: redis:7
+    healthcheck: { test: ['CMD', 'redis-cli', 'ping'], interval: 5s, retries: 10 }
+
+  ml:
+    build: ./services/ml
+    environment:
+      OLLAMA_URL: http://host.docker.internal:11434
+      LLM_MODEL: ${LLM_MODEL:-qwen2.5:3b-instruct}
+    extra_hosts: ['host.docker.internal:host-gateway']
+    volumes: [hf-cache:/root/.cache/huggingface]
+    ports: ['8200:8200']
+
+  api:
+    build: { context: ., dockerfile: apps/api/Dockerfile }
+    environment:
+      DATABASE_URL: postgres://nomad:nomad@postgres:5432/nomad
+      REDIS_URL: redis://redis:6379
+      ML_URL: http://ml:8200
+      DATA_DIR: /data
+    volumes: [runs:/data]
+    ports: ['8100:8100']
+    depends_on:
+      postgres: { condition: service_healthy }
+      redis: { condition: service_healthy }
+      ml: { condition: service_started }
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+      args: { NEXT_PUBLIC_API_URL: 'http://localhost:8100' }
+    ports: ['3000:3000']
+    depends_on: [api]
+
+  buggy-shop:
+    build: ./targets/buggy-shop
+    ports: ['4100:4100']
+
+  buggy-shop-redesign:
+    build: ./targets/buggy-shop
+    environment: { LAYOUT_VERSION: '2', PORT: '4101' }
+    ports: ['4101:4101']
+
+  buggy-shop-fixed:
+    build: ./targets/buggy-shop
+    environment: { BUGS: 'off', PORT: '4102' }
+    ports: ['4102:4102']
+
+volumes:
+  pg:
+  runs:
+  hf-cache:

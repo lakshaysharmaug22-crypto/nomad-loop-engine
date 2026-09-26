@@ -1,0 +1,16 @@
+{
+  "name": "@nomad/benchmarks",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Reproduces the README's numbers: policies, self-healing, regression sweeps.",
+  "scripts": {
+    "bench": "tsx run.ts"
+  },
+  "dependencies": {
+    "@nomad/contracts": "*",
+    "@nomad/engine": "*"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  }
+}

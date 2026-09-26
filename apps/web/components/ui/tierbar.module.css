@@ -1,0 +1,57 @@
+.wrap {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+.bar {
+  display: flex;
+  gap: 2px;
+  min-width: 60px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.bar span {
+  flex-basis: 0;
+  min-width: 3px;
+}
+.empty {
+  flex: 1;
+  background: var(--raised);
+}
+.bar [data-tier='heuristic'],
+.legend [data-tier='heuristic'] {
+  background: var(--t-heuristic);
+}
+.bar [data-tier='ranker'],
+.legend [data-tier='ranker'] {
+  background: var(--t-ranker);
+}
+.bar [data-tier='llm'],
+.legend [data-tier='llm'] {
+  background: var(--t-llm);
+}
+.bar [data-tier='fallback'],
+.legend [data-tier='fallback'] {
+  background: repeating-linear-gradient(135deg, var(--t-fallback) 0 2px, color-mix(in srgb, var(--t-fallback) 45%, transparent) 2px 4px);
+}
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.legend i {
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+}
+.legend b {
+  color: var(--ink);
+  font-weight: 500;
+}

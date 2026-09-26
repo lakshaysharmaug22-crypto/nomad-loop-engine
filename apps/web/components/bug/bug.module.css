@@ -1,0 +1,239 @@
+.page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 18px;
+  max-width: 1480px;
+  margin: 0 auto;
+}
+.back {
+  color: var(--muted);
+  font: 12.5px var(--mono);
+  width: fit-content;
+}
+.back:hover {
+  color: var(--ink);
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+}
+@media (min-width: 1100px) {
+  .grid {
+    grid-template-columns: minmax(0, 1.35fr) minmax(340px, 1fr);
+  }
+}
+
+.shot {
+  margin: 0;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.chrome {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 34px;
+  padding: 0 12px;
+  border-bottom: 1px solid var(--line-soft);
+  background: var(--raised);
+}
+.chrome i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--line);
+}
+.chrome span {
+  margin-left: 10px;
+  padding: 2px 10px;
+  border-radius: 6px;
+  background: var(--sunken);
+  color: var(--ink-2);
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+.noShot {
+  display: grid;
+  place-items: center;
+  height: 260px;
+  color: var(--muted);
+}
+.shot figcaption {
+  padding: 8px 12px;
+  color: var(--faint);
+  font-size: 12px;
+  border-top: 1px solid var(--line-soft);
+}
+
+.side {
+  display: grid;
+  gap: 16px;
+}
+.card {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+}
+.card h2 {
+  font-size: 15px;
+}
+.steps {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 6px;
+}
+.steps li {
+  overflow-wrap: anywhere;
+}
+.facts {
+  display: grid;
+  grid-template-columns: 84px minmax(0, 1fr);
+  gap: 6px 12px;
+  margin: 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--line-soft);
+  font-size: 12.5px;
+}
+.facts dt {
+  color: var(--muted);
+}
+.facts dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 18px;
+  display: grid;
+  gap: 14px;
+  position: relative;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: var(--line);
+}
+.timeline li {
+  position: relative;
+  display: grid;
+  gap: 2px;
+}
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -18px;
+  top: 5px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--panel);
+  border: 2px solid var(--muted);
+}
+.timeline li[data-tone='found']::before {
+  border-color: var(--signal);
+}
+.timeline li[data-tone='broken']::before {
+  border-color: var(--critical);
+}
+.timeline li[data-tone='fixed']::before {
+  border-color: var(--ok);
+  background: var(--ok);
+}
+.timeline li[data-tone='flaky']::before {
+  border-color: var(--major);
+}
+.timeline strong {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  text-transform: none;
+}
+.timeline span {
+  color: var(--muted);
+  font-size: 12.5px;
+  overflow-wrap: anywhere;
+}
+.timeline em {
+  font-style: normal;
+  color: var(--ok);
+}
+
+.testSection {
+  display: grid;
+  gap: 10px;
+}
+.testHead h2 {
+  font-size: 16px;
+}
+.testHead p {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+
+.code {
+  margin: 0;
+  background: var(--sunken);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+.code figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 8px 8px 14px;
+  border-bottom: 1px solid var(--line-soft);
+  background: var(--panel);
+  font-size: 12.5px;
+  color: var(--ink-2);
+}
+.codeActions {
+  display: flex;
+  gap: 4px;
+}
+.code pre {
+  margin: 0;
+  padding: 12px 0;
+  overflow-x: auto;
+  font-size: 12.5px;
+  line-height: 1.65;
+}
+.line {
+  display: block;
+  padding-right: 16px;
+  white-space: pre;
+}
+.ln {
+  display: inline-block;
+  width: 44px;
+  padding-right: 14px;
+  text-align: right;
+  color: var(--faint);
+  user-select: none;
+}

@@ -1,0 +1,329 @@
+{
+  "rows": 885,
+  "runs": 17,
+  "split_rows": {
+    "train": 570,
+    "val": 150,
+    "test": 165
+  },
+  "positive_rate": 0.307,
+  "train_auc": 0.997,
+  "val_auc": 0.995,
+  "test_auc": 0.995,
+  "baseline_best_single_feature": {
+    "feature": "name_length",
+    "test_auc": 0.654
+  },
+  "test_base_rate": 0.273,
+  "test_precision_at_0.55": 0.898,
+  "epochs_run": 400,
+  "roc_test": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0083,
+      0.8889
+    ],
+    [
+      0.0083,
+      0.8889
+    ],
+    [
+      0.0167,
+      0.8889
+    ],
+    [
+      0.025,
+      0.8889
+    ],
+    [
+      0.025,
+      0.8889
+    ],
+    [
+      0.0333,
+      0.8889
+    ],
+    [
+      0.0417,
+      0.9111
+    ],
+    [
+      0.0417,
+      0.9111
+    ],
+    [
+      0.0417,
+      0.9333
+    ],
+    [
+      0.0417,
+      0.9333
+    ],
+    [
+      0.0417,
+      0.9778
+    ],
+    [
+      0.0417,
+      0.9778
+    ],
+    [
+      0.0417,
+      0.9778
+    ],
+    [
+      0.0417,
+      0.9778
+    ],
+    [
+      0.0417,
+      0.9778
+    ],
+    [
+      0.0417,
+      0.9778
+    ],
+    [
+      0.0417,
+      0.9778
+    ],
+    [
+      0.0417,
+      0.9778
+    ],
+    [
+      0.05,
+      0.9778
+    ],
+    [
+      0.05,
+      0.9778
+    ],
+    [
+      0.05,
+      1.0
+    ],
+    [
+      0.05,
+      1.0
+    ],
+    [
+      0.05,
+      1.0
+    ],
+    [
+      0.05,
+      1.0
+    ],
+    [
+      0.05,
+      1.0
+    ],
+    [
+      0.05,
+      1.0
+    ],
+    [
+      0.05,
+      1.0
+    ],
+    [
+      0.05,
+      1.0
+    ],
+    [
+      0.05,
+      1.0
+    ],
+    [
+      0.05,
+      1.0
+    ],
+    [
+      0.05,
+      1.0
+    ],
+    [
+      0.05,
+      1.0
+    ],
+    [
+      0.05,
+      1.0
+    ],
+    [
+      0.05,
+      1.0
+    ],
+    [
+      0.0583,
+      1.0
+    ],
+    [
+      0.075,
+      1.0
+    ],
+    [
+      0.1083,
+      1.0
+    ],
+    [
+      0.175,
+      1.0
+    ],
+    [
+      1.0,
+      1.0
+    ]
+  ],
+  "calibration_test": [
+    {
+      "bin": [
+        0.0,
+        0.2
+      ],
+      "predicted": 0.008,
+      "observed": 0.0,
+      "n": 114
+    },
+    {
+      "bin": [
+        0.4,
+        0.6
+      ],
+      "predicted": 0.491,
+      "observed": 0.5,
+      "n": 2
+    },
+    {
+      "bin": [
+        0.6,
+        0.8
+      ],
+      "predicted": 0.743,
+      "observed": 1.0,
+      "n": 3
+    },
+    {
+      "bin": [
+        0.8,
+        1.0
+      ],
+      "predicted": 0.983,
+      "observed": 0.891,
+      "n": 46
+    }
+  ],
+  "importance_test": [
+    {
+      "feature": "key_global_use",
+      "auc_drop": 0.1881
+    },
+    {
+      "feature": "target_path_unseen",
+      "auc_drop": 0.1571
+    },
+    {
+      "feature": "verb_submit",
+      "auc_drop": 0.0543
+    },
+    {
+      "feature": "kind_link",
+      "auc_drop": 0.046
+    },
+    {
+      "feature": "has_required_fields",
+      "auc_drop": 0.0439
+    },
+    {
+      "feature": "verb_commerce",
+      "auc_drop": 0.024
+    },
+    {
+      "feature": "kind_form",
+      "auc_drop": 0.0216
+    },
+    {
+      "feature": "target_path_depth",
+      "auc_drop": 0.0093
+    },
+    {
+      "feature": "kind_form_empty",
+      "auc_drop": 0.0066
+    },
+    {
+      "feature": "steps_since_new_state",
+      "auc_drop": 0.0023
+    },
+    {
+      "feature": "verb_detail",
+      "auc_drop": 0.001
+    },
+    {
+      "feature": "verb_generic_nav",
+      "auc_drop": 0.0005
+    },
+    {
+      "feature": "in_nav_or_footer",
+      "auc_drop": 0.0001
+    },
+    {
+      "feature": "target_has_query",
+      "auc_drop": 0.0
+    },
+    {
+      "feature": "verb_destructive",
+      "auc_drop": 0.0
+    },
+    {
+      "feature": "n_fields",
+      "auc_drop": -0.0
+    },
+    {
+      "feature": "name_length",
+      "auc_drop": -0.0001
+    },
+    {
+      "feature": "position",
+      "auc_drop": -0.0001
+    },
+    {
+      "feature": "n_candidates",
+      "auc_drop": -0.0002
+    },
+    {
+      "feature": "state_visits",
+      "auc_drop": -0.0007
+    },
+    {
+      "feature": "kind_button",
+      "auc_drop": -0.0017
+    }
+  ],
+  "features": [
+    "kind_link",
+    "kind_button",
+    "kind_form",
+    "kind_form_empty",
+    "target_path_unseen",
+    "target_path_depth",
+    "target_has_query",
+    "in_nav_or_footer",
+    "name_length",
+    "verb_commerce",
+    "verb_submit",
+    "verb_destructive",
+    "verb_generic_nav",
+    "verb_detail",
+    "n_fields",
+    "has_required_fields",
+    "key_global_use",
+    "state_visits",
+    "steps_since_new_state",
+    "position",
+    "n_candidates"
+  ]
+}

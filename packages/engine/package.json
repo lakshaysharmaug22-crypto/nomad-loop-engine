@@ -1,0 +1,32 @@
+{
+  "name": "@nomad/engine",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Exploration engine: state graph, hybrid decision policy, self-healing locator, bug reporter.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "nomad": "dist/cli/nomad.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "tsx --test test/engine.test.ts",
+    "nomad": "tsx src/cli/nomad.ts",
+    "repro": "playwright test -c repro.config.ts"
+  },
+  "dependencies": {
+    "@nomad/contracts": "*",
+    "commander": "^12.1.0",
+    "playwright-core": "^1.49.1"
+  },
+  "optionalDependencies": {
+    "@sparticuz/chromium": "^131.0.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

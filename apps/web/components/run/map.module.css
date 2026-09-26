@@ -1,0 +1,335 @@
+.map {
+  position: relative;
+  background-color: var(--panel);
+  background-image: radial-gradient(circle at center, var(--grid-dot) 1px, transparent 1.3px);
+  background-size: 22px 22px;
+  background-position: 11px 11px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+/* Soft vignette so the grid fades under the HUD and controls */
+.map::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(120% 90% at 50% 45%, transparent 55%, var(--panel) 100%);
+  pointer-events: none;
+}
+
+.svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: clamp(360px, 58vh, 620px);
+  touch-action: pan-y;
+}
+
+/* HUD: what the map is showing right now */
+.hud {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  right: 14px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  pointer-events: none;
+}
+.hudLeft {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+.hudTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font: 600 11px var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.hudTitle i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--signal);
+  box-shadow: 0 0 0 3px var(--signal-soft);
+}
+.hudTitle[data-live] i {
+  animation: blink 1.4s ease-in-out infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0.3;
+  }
+}
+.hudCurrent {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font: 500 12.5px var(--mono);
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hudCurrent span {
+  color: var(--faint);
+  font-size: 11.5px;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px 12px;
+  font: 500 11px var(--mono);
+  color: var(--muted);
+}
+.legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.legend b {
+  display: inline-block;
+  width: 18px;
+  height: 0;
+  border-top: 2px dotted;
+}
+.legend .keyHeuristic {
+  border-color: var(--t-heuristic);
+}
+.legend .keyRanker {
+  border-color: var(--t-ranker);
+}
+.legend .keyLlm {
+  border-color: var(--t-llm);
+}
+.legend .keyFallback {
+  border-color: var(--t-fallback);
+  border-top-style: dashed;
+}
+
+/* Scene elements (created by D3) */
+.svg :global(.edge) {
+  fill: none;
+  stroke-width: 1.2;
+  opacity: 0.22;
+  transition: opacity 0.2s;
+}
+.svg :global(.flow) {
+  fill: none;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-dasharray: 0.01 13.99;
+  opacity: 0.35;
+  animation: flow 0.9s linear infinite;
+  transition: opacity 0.2s;
+}
+@keyframes flow {
+  to {
+    stroke-dashoffset: -14;
+  }
+}
+.svg :global(.tier-heuristic) {
+  stroke: var(--t-heuristic);
+}
+.svg :global(.tier-ranker) {
+  stroke: var(--t-ranker);
+}
+.svg :global(.tier-llm) {
+  stroke: var(--t-llm);
+}
+.svg :global(.tier-fallback) {
+  stroke: var(--t-fallback);
+}
+.svg :global(.edge.tier-fallback) {
+  stroke-dasharray: 3 3;
+}
+.svg :global(.edge.recent) {
+  opacity: 0.45;
+}
+.svg :global(.flow.recent) {
+  opacity: 0.9;
+  animation-duration: 0.6s;
+}
+.svg :global(.edge.fresh),
+.svg :global(.edge.linked) {
+  opacity: 0.7;
+  stroke-width: 1.6;
+}
+.svg :global(.flow.fresh),
+.svg :global(.flow.linked) {
+  opacity: 1;
+  stroke-width: 3.2;
+  animation-duration: 0.45s;
+}
+.svg :global(.edge.dim),
+.svg :global(.flow.dim) {
+  opacity: 0.06;
+}
+
+.svg :global(.node) {
+  cursor: pointer;
+  outline: none;
+}
+.svg :global(.node .hit) {
+  fill: transparent;
+}
+.svg :global(.node .dot) {
+  fill: var(--panel);
+  stroke: var(--ink-2);
+  stroke-width: 1.5;
+  transition: r 0.3s var(--ease);
+}
+.svg :global(.node.has-bug .dot) {
+  stroke: var(--panel);
+  stroke-width: 2;
+}
+.svg :global(.node.root .dot) {
+  fill: var(--ink);
+  stroke: var(--panel);
+  stroke-width: 2;
+}
+.svg :global(.node .halo) {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.2;
+  opacity: 0;
+}
+.svg :global(.node.has-bug .halo) {
+  stroke: currentColor;
+  opacity: 0.3;
+  stroke-dasharray: 2 2;
+}
+.svg :global(.node.current .dot) {
+  fill: var(--signal);
+  stroke: var(--panel);
+  stroke-width: 2;
+}
+.svg :global(.node:focus-visible .halo) {
+  opacity: 1;
+  stroke: var(--signal);
+}
+.svg :global(.node .label) {
+  font: 500 10px var(--mono);
+  fill: var(--muted);
+  paint-order: stroke;
+  stroke: var(--panel);
+  stroke-width: 3.5px;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+.svg :global(.node .label.hidden) {
+  opacity: 0;
+}
+.svg :global(.node.current .label) {
+  fill: var(--ink);
+  font-weight: 600;
+}
+.svg :global(.node.dim) {
+  opacity: 0.3;
+}
+
+.svg :global(.reticle) {
+  pointer-events: none;
+}
+.svg :global(.reticle .spin circle) {
+  fill: none;
+  stroke: var(--signal);
+  stroke-width: 1.4;
+  stroke-dasharray: 5 4;
+}
+.svg :global(.reticle .spin) {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: spin 9s linear infinite;
+}
+.svg :global(.reticle .tick) {
+  stroke: var(--signal);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.svg :global(.ripple) {
+  fill: none;
+  stroke-width: 1.5;
+  pointer-events: none;
+}
+.svg :global(.traveler rect) {
+  fill: var(--signal);
+  stroke: var(--panel);
+  stroke-width: 1.5;
+  filter: drop-shadow(0 0 6px var(--signal-glow));
+}
+@media (prefers-reduced-motion: reduce) {
+  .svg :global(.flow),
+  .svg :global(.reticle .spin),
+  .hudTitle[data-live] i {
+    animation: none;
+  }
+}
+
+.tip {
+  position: absolute;
+  z-index: 5;
+  width: 240px;
+  transform: translate(-50%, calc(-100% - 10px));
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-pop);
+  overflow: hidden;
+  pointer-events: none;
+}
+.tip img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+  border-bottom: 1px solid var(--line-soft);
+  background: var(--raised);
+}
+.tipBody {
+  display: grid;
+  gap: 4px;
+  padding: 8px 10px 10px;
+}
+.tipPath {
+  font: 500 12.5px var(--mono);
+}
+.tipMeta {
+  color: var(--muted);
+  font-size: 11.5px;
+}
+.tipBug {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 12px;
+}
+.tipBug i {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 560px) {
+  .legend {
+    display: none;
+  }
+}

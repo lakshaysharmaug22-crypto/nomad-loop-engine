@@ -1,0 +1,2789 @@
+{
+  "embedder": "hashing-ngram (offline fallback)",
+  "targets": 91,
+  "naiveResolved": 40,
+  "healingResolved": 91,
+  "naiveBreakRate": 0.56,
+  "healingBreakRate": 0,
+  "wrongElement": 0,
+  "abstained": 0,
+  "healedSemantically": 20,
+  "rows": [
+    {
+      "page": "/",
+      "target": {
+        "role": "link",
+        "name": "Home",
+        "context": "nav: Main",
+        "id": "nav-home",
+        "testId": "nav-home"
+      },
+      "expected": "Home",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Home",
+      "candidates": []
+    },
+    {
+      "page": "/",
+      "target": {
+        "role": "link",
+        "name": "Cart (1)",
+        "context": "nav: Main | Home",
+        "id": "nav-cart",
+        "testId": "nav-cart"
+      },
+      "expected": "Cart (0)",
+      "naive": false,
+      "healed": true,
+      "strategy": "healed",
+      "via": "semantic",
+      "score": 0.909,
+      "picked": "Cart (0)",
+      "candidates": [
+        {
+          "name": "Cart (0)",
+          "role": "link",
+          "context": "nav: Main | Home",
+          "score": {
+            "semantic": 0.854,
+            "role": 1,
+            "context": 1,
+            "tag": 1,
+            "total": 0.909
+          }
+        },
+        {
+          "name": "Home",
+          "role": "link",
+          "context": "nav: Main",
+          "score": {
+            "semantic": 0.28,
+            "role": 1,
+            "context": 0.8,
+            "tag": 1,
+            "total": 0.53
+          }
+        },
+        {
+          "name": "Careers",
+          "role": "link",
+          "context": "footer: | About",
+          "score": {
+            "semantic": 0.334,
+            "role": 1,
+            "context": 0,
+            "tag": 1,
+            "total": 0.467
+          }
+        },
+        {
+          "name": "View details",
+          "role": "link",
+          "context": "div: Canvas Backpack | ₹1499",
+          "score": {
+            "semantic": 0.295,
+            "role": 1,
+            "context": 0,
+            "tag": 1,
+            "total": 0.443
+          }
+        },
+        {
+          "name": "Account",
+          "role": "link",
+          "context": "nav: Main | Cart (0)",
+          "score": {
+            "semantic": 0.152,
+            "role": 1,
+            "context": 0.592,
+            "tag": 1,
+            "total": 0.425
+          }
+        }
+      ]
+    },
+    {
+      "page": "/",
+      "target": {
+        "role": "link",
+        "name": "Account",
+        "context": "nav: Main | Cart (1)",
+        "id": "nav-account",
+        "testId": "nav-account"
+      },
+      "expected": "Account",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Account",
+      "candidates": []
+    },
+    {
+      "page": "/",
+      "target": {
+        "role": "textbox",
+        "name": "Search products",
+        "context": "form:",
+        "id": "search-input",
+        "testId": "search-input"
+      },
+      "expected": "Search products",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Search products",
+      "candidates": []
+    },
+    {
+      "page": "/",
+      "target": {
+        "role": "button",
+        "name": "Search",
+        "context": "form: | Search products",
+        "id": "search-btn",
+        "testId": "search-btn"
+      },
+      "expected": "Find",
+      "naive": false,
+      "healed": true,
+      "strategy": "healed",
+      "via": "semantic",
+      "score": 0.691,
+      "picked": "Find",
+      "candidates": [
+        {
+          "name": "Find",
+          "role": "button",
+          "context": "form: | Search products",
+          "score": {
+            "semantic": 0.501,
+            "role": 1,
+            "context": 1,
+            "tag": 1,
+            "total": 0.691
+          }
+        },
+        {
+          "name": "Subscribe",
+          "role": "button",
+          "context": "form: | Your email",
+          "score": {
+            "semantic": 0.471,
+            "role": 1,
+            "context": 0.239,
+            "tag": 1,
+            "total": 0.581
+          }
+        },
+        {
+          "name": "Home",
+          "role": "link",
+          "context": "nav: Main",
+          "score": {
+            "semantic": 0.106,
+            "role": 0,
+            "context": 0.171,
+            "tag": 0,
+            "total": 0.086
+          }
+        },
+        {
+          "name": "View details",
+          "role": "link",
+          "context": "div: Notebook Set | ₹349",
+          "score": {
+            "semantic": 0.064,
+            "role": 0,
+            "context": 0.139,
+            "tag": 0,
+            "total": 0.056
+          }
+        },
+        {
+          "name": "Cart (0)",
+          "role": "link",
+          "context": "nav: Main | Home",
+          "score": {
+            "semantic": 0.063,
+            "role": 0,
+            "context": 0.137,
+            "tag": 0,
+            "total": 0.055
+          }
+        }
+      ]
+    },
+    {
+      "page": "/",
+      "target": {
+        "role": "link",
+        "name": "View details",
+        "context": "div: Canvas Backpack | ₹1499",
+        "id": "view-1",
+        "testId": "view-1"
+      },
+      "expected": "View details",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "View details",
+      "candidates": []
+    },
+    {
+      "page": "/",
+      "target": {
+        "role": "link",
+        "name": "View details",
+        "context": "div: Steel Water Bottle | ₹699",
+        "id": "view-2",
+        "testId": "view-2"
+      },
+      "expected": "View details",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "View details",
+      "candidates": []
+    },
+    {
+      "page": "/",
+      "target": {
+        "role": "link",
+        "name": "View details",
+        "context": "div: Desk Lamp | ₹2199",
+        "id": "view-3",
+        "testId": "view-3"
+      },
+      "expected": "View details",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "View details",
+      "candidates": []
+    },
+    {
+      "page": "/",
+      "target": {
+        "role": "link",
+        "name": "View details",
+        "context": "div: Noise-Cancelling Headphones | ₹8999",
+        "id": "view-4",
+        "testId": "view-4"
+      },
+      "expected": "View details",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "View details",
+      "candidates": []
+    },
+    {
+      "page": "/",
+      "target": {
+        "role": "link",
+        "name": "View details",
+        "context": "div: Notebook Set | ₹349",
+        "id": "view-5",
+        "testId": "view-5"
+      },
+      "expected": "View details",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "View details",
+      "candidates": []
+    },
+    {
+      "page": "/",
+      "target": {
+        "role": "link",
+        "name": "About",
+        "context": "footer:"
+      },
+      "expected": "About",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "About",
+      "candidates": []
+    },
+    {
+      "page": "/",
+      "target": {
+        "role": "link",
+        "name": "Careers",
+        "context": "footer: | About"
+      },
+      "expected": "Careers",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Careers",
+      "candidates": []
+    },
+    {
+      "page": "/",
+      "target": {
+        "role": "textbox",
+        "name": "Newsletter email",
+        "context": "form:"
+      },
+      "expected": "Newsletter email",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Newsletter email",
+      "candidates": []
+    },
+    {
+      "page": "/",
+      "target": {
+        "role": "button",
+        "name": "Subscribe",
+        "context": "form: | Your email"
+      },
+      "expected": "Subscribe",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Subscribe",
+      "candidates": []
+    },
+    {
+      "page": "/product/1",
+      "target": {
+        "role": "link",
+        "name": "Home",
+        "context": "nav: Main",
+        "id": "nav-home",
+        "testId": "nav-home"
+      },
+      "expected": "Home",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Home",
+      "candidates": []
+    },
+    {
+      "page": "/product/1",
+      "target": {
+        "role": "link",
+        "name": "Cart (1)",
+        "context": "nav: Main | Home",
+        "id": "nav-cart",
+        "testId": "nav-cart"
+      },
+      "expected": "Cart (0)",
+      "naive": false,
+      "healed": true,
+      "strategy": "healed",
+      "via": "semantic",
+      "score": 0.909,
+      "picked": "Cart (0)",
+      "candidates": [
+        {
+          "name": "Cart (0)",
+          "role": "link",
+          "context": "nav: Main | Home",
+          "score": {
+            "semantic": 0.854,
+            "role": 1,
+            "context": 1,
+            "tag": 1,
+            "total": 0.909
+          }
+        },
+        {
+          "name": "Home",
+          "role": "link",
+          "context": "nav: Main",
+          "score": {
+            "semantic": 0.28,
+            "role": 1,
+            "context": 0.8,
+            "tag": 1,
+            "total": 0.53
+          }
+        },
+        {
+          "name": "Careers",
+          "role": "link",
+          "context": "footer: | About",
+          "score": {
+            "semantic": 0.334,
+            "role": 1,
+            "context": 0,
+            "tag": 1,
+            "total": 0.467
+          }
+        },
+        {
+          "name": "Account",
+          "role": "link",
+          "context": "nav: Main | Cart (0)",
+          "score": {
+            "semantic": 0.152,
+            "role": 1,
+            "context": 0.592,
+            "tag": 1,
+            "total": 0.425
+          }
+        },
+        {
+          "name": "About",
+          "role": "link",
+          "context": "footer:",
+          "score": {
+            "semantic": 0.17,
+            "role": 1,
+            "context": 0,
+            "tag": 1,
+            "total": 0.365
+          }
+        }
+      ]
+    },
+    {
+      "page": "/product/1",
+      "target": {
+        "role": "link",
+        "name": "Account",
+        "context": "nav: Main | Cart (1)",
+        "id": "nav-account",
+        "testId": "nav-account"
+      },
+      "expected": "Account",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Account",
+      "candidates": []
+    },
+    {
+      "page": "/product/1",
+      "target": {
+        "role": "textbox",
+        "name": "Search products",
+        "context": "form:",
+        "id": "search-input",
+        "testId": "search-input"
+      },
+      "expected": "Search products",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Search products",
+      "candidates": []
+    },
+    {
+      "page": "/product/1",
+      "target": {
+        "role": "button",
+        "name": "Search",
+        "context": "form: | Search products",
+        "id": "search-btn",
+        "testId": "search-btn"
+      },
+      "expected": "Find",
+      "naive": false,
+      "healed": true,
+      "strategy": "healed",
+      "via": "semantic",
+      "score": 0.691,
+      "picked": "Find",
+      "candidates": [
+        {
+          "name": "Find",
+          "role": "button",
+          "context": "form: | Search products",
+          "score": {
+            "semantic": 0.501,
+            "role": 1,
+            "context": 1,
+            "tag": 1,
+            "total": 0.691
+          }
+        },
+        {
+          "name": "Subscribe",
+          "role": "button",
+          "context": "form: | Your email",
+          "score": {
+            "semantic": 0.471,
+            "role": 1,
+            "context": 0.239,
+            "tag": 1,
+            "total": 0.581
+          }
+        },
+        {
+          "name": "Add to bag",
+          "role": "button",
+          "context": "main: Canvas Backpack | Price: ₹1499",
+          "score": {
+            "semantic": 0.38,
+            "role": 1,
+            "context": 0.023,
+            "tag": 1,
+            "total": 0.498
+          }
+        },
+        {
+          "name": "Home",
+          "role": "link",
+          "context": "nav: Main",
+          "score": {
+            "semantic": 0.106,
+            "role": 0,
+            "context": 0.171,
+            "tag": 0,
+            "total": 0.086
+          }
+        },
+        {
+          "name": "Cart (0)",
+          "role": "link",
+          "context": "nav: Main | Home",
+          "score": {
+            "semantic": 0.063,
+            "role": 0,
+            "context": 0.137,
+            "tag": 0,
+            "total": 0.055
+          }
+        }
+      ]
+    },
+    {
+      "page": "/product/1",
+      "target": {
+        "role": "button",
+        "name": "Add to cart",
+        "context": "main: Canvas Backpack | Price: ₹1499",
+        "id": "add-to-cart",
+        "testId": "add-to-cart"
+      },
+      "expected": "Add to bag",
+      "naive": false,
+      "healed": true,
+      "strategy": "healed",
+      "via": "semantic",
+      "score": 0.843,
+      "picked": "Add to bag",
+      "candidates": [
+        {
+          "name": "Add to bag",
+          "role": "button",
+          "context": "main: Canvas Backpack | Price: ₹1499",
+          "score": {
+            "semantic": 0.746,
+            "role": 1,
+            "context": 1,
+            "tag": 1,
+            "total": 0.843
+          }
+        },
+        {
+          "name": "Find",
+          "role": "button",
+          "context": "form: | Search products",
+          "score": {
+            "semantic": 0.393,
+            "role": 1,
+            "context": 0.023,
+            "tag": 1,
+            "total": 0.506
+          }
+        },
+        {
+          "name": "Subscribe",
+          "role": "button",
+          "context": "form: | Your email",
+          "score": {
+            "semantic": 0.336,
+            "role": 1,
+            "context": 0.046,
+            "tag": 1,
+            "total": 0.474
+          }
+        },
+        {
+          "name": "Cart (0)",
+          "role": "link",
+          "context": "nav: Main | Home",
+          "score": {
+            "semantic": 0.396,
+            "role": 0,
+            "context": 0.212,
+            "tag": 0,
+            "total": 0.271
+          }
+        },
+        {
+          "name": "Careers",
+          "role": "link",
+          "context": "footer: | About",
+          "score": {
+            "semantic": 0.093,
+            "role": 0,
+            "context": 0,
+            "tag": 0,
+            "total": 0.058
+          }
+        }
+      ]
+    },
+    {
+      "page": "/product/1",
+      "target": {
+        "role": "link",
+        "name": "About",
+        "context": "footer:"
+      },
+      "expected": "About",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "About",
+      "candidates": []
+    },
+    {
+      "page": "/product/1",
+      "target": {
+        "role": "link",
+        "name": "Careers",
+        "context": "footer: | About"
+      },
+      "expected": "Careers",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Careers",
+      "candidates": []
+    },
+    {
+      "page": "/product/1",
+      "target": {
+        "role": "textbox",
+        "name": "Newsletter email",
+        "context": "form:"
+      },
+      "expected": "Newsletter email",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Newsletter email",
+      "candidates": []
+    },
+    {
+      "page": "/product/1",
+      "target": {
+        "role": "button",
+        "name": "Subscribe",
+        "context": "form: | Your email"
+      },
+      "expected": "Subscribe",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Subscribe",
+      "candidates": []
+    },
+    {
+      "page": "/product/3",
+      "target": {
+        "role": "link",
+        "name": "Home",
+        "context": "nav: Main",
+        "id": "nav-home",
+        "testId": "nav-home"
+      },
+      "expected": "Home",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Home",
+      "candidates": []
+    },
+    {
+      "page": "/product/3",
+      "target": {
+        "role": "link",
+        "name": "Cart (1)",
+        "context": "nav: Main | Home",
+        "id": "nav-cart",
+        "testId": "nav-cart"
+      },
+      "expected": "Cart (0)",
+      "naive": false,
+      "healed": true,
+      "strategy": "healed",
+      "via": "semantic",
+      "score": 0.909,
+      "picked": "Cart (0)",
+      "candidates": [
+        {
+          "name": "Cart (0)",
+          "role": "link",
+          "context": "nav: Main | Home",
+          "score": {
+            "semantic": 0.854,
+            "role": 1,
+            "context": 1,
+            "tag": 1,
+            "total": 0.909
+          }
+        },
+        {
+          "name": "Home",
+          "role": "link",
+          "context": "nav: Main",
+          "score": {
+            "semantic": 0.28,
+            "role": 1,
+            "context": 0.8,
+            "tag": 1,
+            "total": 0.53
+          }
+        },
+        {
+          "name": "Careers",
+          "role": "link",
+          "context": "footer: | About",
+          "score": {
+            "semantic": 0.334,
+            "role": 1,
+            "context": 0,
+            "tag": 1,
+            "total": 0.467
+          }
+        },
+        {
+          "name": "Account",
+          "role": "link",
+          "context": "nav: Main | Cart (0)",
+          "score": {
+            "semantic": 0.152,
+            "role": 1,
+            "context": 0.592,
+            "tag": 1,
+            "total": 0.425
+          }
+        },
+        {
+          "name": "About",
+          "role": "link",
+          "context": "footer:",
+          "score": {
+            "semantic": 0.17,
+            "role": 1,
+            "context": 0,
+            "tag": 1,
+            "total": 0.365
+          }
+        }
+      ]
+    },
+    {
+      "page": "/product/3",
+      "target": {
+        "role": "link",
+        "name": "Account",
+        "context": "nav: Main | Cart (1)",
+        "id": "nav-account",
+        "testId": "nav-account"
+      },
+      "expected": "Account",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Account",
+      "candidates": []
+    },
+    {
+      "page": "/product/3",
+      "target": {
+        "role": "textbox",
+        "name": "Search products",
+        "context": "form:",
+        "id": "search-input",
+        "testId": "search-input"
+      },
+      "expected": "Search products",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Search products",
+      "candidates": []
+    },
+    {
+      "page": "/product/3",
+      "target": {
+        "role": "button",
+        "name": "Search",
+        "context": "form: | Search products",
+        "id": "search-btn",
+        "testId": "search-btn"
+      },
+      "expected": "Find",
+      "naive": false,
+      "healed": true,
+      "strategy": "healed",
+      "via": "semantic",
+      "score": 0.691,
+      "picked": "Find",
+      "candidates": [
+        {
+          "name": "Find",
+          "role": "button",
+          "context": "form: | Search products",
+          "score": {
+            "semantic": 0.501,
+            "role": 1,
+            "context": 1,
+            "tag": 1,
+            "total": 0.691
+          }
+        },
+        {
+          "name": "Subscribe",
+          "role": "button",
+          "context": "form: | Your email",
+          "score": {
+            "semantic": 0.471,
+            "role": 1,
+            "context": 0.239,
+            "tag": 1,
+            "total": 0.581
+          }
+        },
+        {
+          "name": "Add to bag",
+          "role": "button",
+          "context": "main: Desk Lamp | Price: ₹2199",
+          "score": {
+            "semantic": 0.38,
+            "role": 1,
+            "context": 0.026,
+            "tag": 1,
+            "total": 0.499
+          }
+        },
+        {
+          "name": "Home",
+          "role": "link",
+          "context": "nav: Main",
+          "score": {
+            "semantic": 0.106,
+            "role": 0,
+            "context": 0.171,
+            "tag": 0,
+            "total": 0.086
+          }
+        },
+        {
+          "name": "Cart (0)",
+          "role": "link",
+          "context": "nav: Main | Home",
+          "score": {
+            "semantic": 0.063,
+            "role": 0,
+            "context": 0.137,
+            "tag": 0,
+            "total": 0.055
+          }
+        }
+      ]
+    },
+    {
+      "page": "/product/3",
+      "target": {
+        "role": "button",
+        "name": "Add to cart",
+        "context": "main: Desk Lamp | Price: ₹2199",
+        "id": "add-to-cart",
+        "testId": "add-to-cart"
+      },
+      "expected": "Add to bag",
+      "naive": false,
+      "healed": true,
+      "strategy": "healed",
+      "via": "semantic",
+      "score": 0.843,
+      "picked": "Add to bag",
+      "candidates": [
+        {
+          "name": "Add to bag",
+          "role": "button",
+          "context": "main: Desk Lamp | Price: ₹2199",
+          "score": {
+            "semantic": 0.746,
+            "role": 1,
+            "context": 1,
+            "tag": 1,
+            "total": 0.843
+          }
+        },
+        {
+          "name": "Find",
+          "role": "button",
+          "context": "form: | Search products",
+          "score": {
+            "semantic": 0.393,
+            "role": 1,
+            "context": 0.026,
+            "tag": 1,
+            "total": 0.507
+          }
+        },
+        {
+          "name": "Subscribe",
+          "role": "button",
+          "context": "form: | Your email",
+          "score": {
+            "semantic": 0.336,
+            "role": 1,
+            "context": 0.052,
+            "tag": 1,
+            "total": 0.475
+          }
+        },
+        {
+          "name": "Cart (0)",
+          "role": "link",
+          "context": "nav: Main | Home",
+          "score": {
+            "semantic": 0.396,
+            "role": 0,
+            "context": 0.239,
+            "tag": 0,
+            "total": 0.274
+          }
+        },
+        {
+          "name": "Careers",
+          "role": "link",
+          "context": "footer: | About",
+          "score": {
+            "semantic": 0.093,
+            "role": 0,
+            "context": 0,
+            "tag": 0,
+            "total": 0.058
+          }
+        }
+      ]
+    },
+    {
+      "page": "/product/3",
+      "target": {
+        "role": "link",
+        "name": "About",
+        "context": "footer:"
+      },
+      "expected": "About",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "About",
+      "candidates": []
+    },
+    {
+      "page": "/product/3",
+      "target": {
+        "role": "link",
+        "name": "Careers",
+        "context": "footer: | About"
+      },
+      "expected": "Careers",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Careers",
+      "candidates": []
+    },
+    {
+      "page": "/product/3",
+      "target": {
+        "role": "textbox",
+        "name": "Newsletter email",
+        "context": "form:"
+      },
+      "expected": "Newsletter email",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Newsletter email",
+      "candidates": []
+    },
+    {
+      "page": "/product/3",
+      "target": {
+        "role": "button",
+        "name": "Subscribe",
+        "context": "form: | Your email"
+      },
+      "expected": "Subscribe",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Subscribe",
+      "candidates": []
+    },
+    {
+      "page": "/cart",
+      "target": {
+        "role": "link",
+        "name": "Home",
+        "context": "nav: Main",
+        "id": "nav-home",
+        "testId": "nav-home"
+      },
+      "expected": "Home",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Home",
+      "candidates": []
+    },
+    {
+      "page": "/cart",
+      "target": {
+        "role": "link",
+        "name": "Cart (1)",
+        "context": "nav: Main | Home",
+        "id": "nav-cart",
+        "testId": "nav-cart"
+      },
+      "expected": "Cart (0)",
+      "naive": false,
+      "healed": true,
+      "strategy": "healed",
+      "via": "semantic",
+      "score": 0.909,
+      "picked": "Cart (0)",
+      "candidates": [
+        {
+          "name": "Cart (0)",
+          "role": "link",
+          "context": "nav: Main | Home",
+          "score": {
+            "semantic": 0.854,
+            "role": 1,
+            "context": 1,
+            "tag": 1,
+            "total": 0.909
+          }
+        },
+        {
+          "name": "Home",
+          "role": "link",
+          "context": "nav: Main",
+          "score": {
+            "semantic": 0.28,
+            "role": 1,
+            "context": 0.8,
+            "tag": 1,
+            "total": 0.53
+          }
+        },
+        {
+          "name": "Careers",
+          "role": "link",
+          "context": "footer: | About",
+          "score": {
+            "semantic": 0.334,
+            "role": 1,
+            "context": 0,
+            "tag": 1,
+            "total": 0.467
+          }
+        },
+        {
+          "name": "Proceed to checkout",
+          "role": "link",
+          "context": "main: Your cart",
+          "score": {
+            "semantic": 0.211,
+            "role": 1,
+            "context": 0.353,
+            "tag": 1,
+            "total": 0.433
+          }
+        },
+        {
+          "name": "Account",
+          "role": "link",
+          "context": "nav: Main | Cart (0)",
+          "score": {
+            "semantic": 0.152,
+            "role": 1,
+            "context": 0.592,
+            "tag": 1,
+            "total": 0.425
+          }
+        }
+      ]
+    },
+    {
+      "page": "/cart",
+      "target": {
+        "role": "link",
+        "name": "Account",
+        "context": "nav: Main | Cart (1)",
+        "id": "nav-account",
+        "testId": "nav-account"
+      },
+      "expected": "Account",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Account",
+      "candidates": []
+    },
+    {
+      "page": "/cart",
+      "target": {
+        "role": "textbox",
+        "name": "Search products",
+        "context": "form:",
+        "id": "search-input",
+        "testId": "search-input"
+      },
+      "expected": "Search products",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Search products",
+      "candidates": []
+    },
+    {
+      "page": "/cart",
+      "target": {
+        "role": "button",
+        "name": "Search",
+        "context": "form: | Search products",
+        "id": "search-btn",
+        "testId": "search-btn"
+      },
+      "expected": "Find",
+      "naive": false,
+      "healed": true,
+      "strategy": "healed",
+      "via": "semantic",
+      "score": 0.691,
+      "picked": "Find",
+      "candidates": [
+        {
+          "name": "Find",
+          "role": "button",
+          "context": "form: | Search products",
+          "score": {
+            "semantic": 0.501,
+            "role": 1,
+            "context": 1,
+            "tag": 1,
+            "total": 0.691
+          }
+        },
+        {
+          "name": "Subscribe",
+          "role": "button",
+          "context": "form: | Your email",
+          "score": {
+            "semantic": 0.471,
+            "role": 1,
+            "context": 0.239,
+            "tag": 1,
+            "total": 0.581
+          }
+        },
+        {
+          "name": "Redeem code",
+          "role": "button",
+          "context": "main: Your cart | Coupon Coupon code",
+          "score": {
+            "semantic": 0.386,
+            "role": 1,
+            "context": 0.038,
+            "tag": 1,
+            "total": 0.504
+          }
+        },
+        {
+          "name": "Home",
+          "role": "link",
+          "context": "nav: Main",
+          "score": {
+            "semantic": 0.106,
+            "role": 0,
+            "context": 0.171,
+            "tag": 0,
+            "total": 0.086
+          }
+        },
+        {
+          "name": "Cart (0)",
+          "role": "link",
+          "context": "nav: Main | Home",
+          "score": {
+            "semantic": 0.063,
+            "role": 0,
+            "context": 0.137,
+            "tag": 0,
+            "total": 0.055
+          }
+        }
+      ]
+    },
+    {
+      "page": "/cart",
+      "target": {
+        "role": "textbox",
+        "name": "Coupon",
+        "context": "main: Your cart",
+        "id": "coupon"
+      },
+      "expected": "Coupon",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Coupon",
+      "candidates": []
+    },
+    {
+      "page": "/cart",
+      "target": {
+        "role": "button",
+        "name": "Apply coupon",
+        "context": "main: Your cart | Coupon Coupon code",
+        "id": "apply-coupon",
+        "testId": "apply-coupon"
+      },
+      "expected": "Redeem code",
+      "naive": false,
+      "healed": true,
+      "strategy": "healed",
+      "via": "semantic",
+      "score": 0.621,
+      "picked": "Redeem code",
+      "candidates": [
+        {
+          "name": "Redeem code",
+          "role": "button",
+          "context": "main: Your cart | Coupon Coupon code",
+          "score": {
+            "semantic": 0.388,
+            "role": 1,
+            "context": 1,
+            "tag": 1,
+            "total": 0.621
+          }
+        },
+        {
+          "name": "Subscribe",
+          "role": "button",
+          "context": "form: | Your email",
+          "score": {
+            "semantic": 0.431,
+            "role": 1,
+            "context": 0.248,
+            "tag": 1,
+            "total": 0.557
+          }
+        },
+        {
+          "name": "Find",
+          "role": "button",
+          "context": "form: | Search products",
+          "score": {
+            "semantic": 0.465,
+            "role": 1,
+            "context": 0.038,
+            "tag": 1,
+            "total": 0.553
+          }
+        },
+        {
+          "name": "Proceed to checkout",
+          "role": "link",
+          "context": "main: Your cart",
+          "score": {
+            "semantic": 0.038,
+            "role": 0,
+            "context": 0.56,
+            "tag": 0,
+            "total": 0.091
+          }
+        },
+        {
+          "name": "Account",
+          "role": "link",
+          "context": "nav: Main | Cart (0)",
+          "score": {
+            "semantic": 0.044,
+            "role": 0,
+            "context": 0.363,
+            "tag": 0,
+            "total": 0.071
+          }
+        }
+      ]
+    },
+    {
+      "page": "/cart",
+      "target": {
+        "role": "link",
+        "name": "Checkout",
+        "context": "main: Your cart",
+        "id": "checkout-link",
+        "testId": "checkout-link"
+      },
+      "expected": "Proceed to checkout",
+      "naive": false,
+      "healed": true,
+      "strategy": "healed",
+      "via": "semantic",
+      "score": 0.911,
+      "picked": "Proceed to checkout",
+      "candidates": [
+        {
+          "name": "Proceed to checkout",
+          "role": "link",
+          "context": "main: Your cart",
+          "score": {
+            "semantic": 0.857,
+            "role": 1,
+            "context": 1,
+            "tag": 1,
+            "total": 0.911
+          }
+        },
+        {
+          "name": "Home",
+          "role": "link",
+          "context": "nav: Main",
+          "score": {
+            "semantic": 0.287,
+            "role": 1,
+            "context": 0.441,
+            "tag": 1,
+            "total": 0.491
+          }
+        },
+        {
+          "name": "About",
+          "role": "link",
+          "context": "footer:",
+          "score": {
+            "semantic": 0.31,
+            "role": 1,
+            "context": 0.062,
+            "tag": 1,
+            "total": 0.46
+          }
+        },
+        {
+          "name": "Account",
+          "role": "link",
+          "context": "nav: Main | Cart (0)",
+          "score": {
+            "semantic": 0.207,
+            "role": 1,
+            "context": 0.58,
+            "tag": 1,
+            "total": 0.458
+          }
+        },
+        {
+          "name": "Cart (0)",
+          "role": "link",
+          "context": "nav: Main | Home",
+          "score": {
+            "semantic": 0.246,
+            "role": 1,
+            "context": 0.353,
+            "tag": 1,
+            "total": 0.455
+          }
+        }
+      ]
+    },
+    {
+      "page": "/cart",
+      "target": {
+        "role": "link",
+        "name": "About",
+        "context": "footer:"
+      },
+      "expected": "About",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "About",
+      "candidates": []
+    },
+    {
+      "page": "/cart",
+      "target": {
+        "role": "link",
+        "name": "Careers",
+        "context": "footer: | About"
+      },
+      "expected": "Careers",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Careers",
+      "candidates": []
+    },
+    {
+      "page": "/cart",
+      "target": {
+        "role": "textbox",
+        "name": "Newsletter email",
+        "context": "form:"
+      },
+      "expected": "Newsletter email",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Newsletter email",
+      "candidates": []
+    },
+    {
+      "page": "/cart",
+      "target": {
+        "role": "button",
+        "name": "Subscribe",
+        "context": "form: | Your email"
+      },
+      "expected": "Subscribe",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Subscribe",
+      "candidates": []
+    },
+    {
+      "page": "/checkout",
+      "target": {
+        "role": "link",
+        "name": "Home",
+        "context": "nav: Main",
+        "id": "nav-home",
+        "testId": "nav-home"
+      },
+      "expected": "Home",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Home",
+      "candidates": []
+    },
+    {
+      "page": "/checkout",
+      "target": {
+        "role": "link",
+        "name": "Cart (1)",
+        "context": "nav: Main | Home",
+        "id": "nav-cart",
+        "testId": "nav-cart"
+      },
+      "expected": "Cart (0)",
+      "naive": false,
+      "healed": true,
+      "strategy": "healed",
+      "via": "semantic",
+      "score": 0.909,
+      "picked": "Cart (0)",
+      "candidates": [
+        {
+          "name": "Cart (0)",
+          "role": "link",
+          "context": "nav: Main | Home",
+          "score": {
+            "semantic": 0.854,
+            "role": 1,
+            "context": 1,
+            "tag": 1,
+            "total": 0.909
+          }
+        },
+        {
+          "name": "Home",
+          "role": "link",
+          "context": "nav: Main",
+          "score": {
+            "semantic": 0.28,
+            "role": 1,
+            "context": 0.8,
+            "tag": 1,
+            "total": 0.53
+          }
+        },
+        {
+          "name": "Careers",
+          "role": "link",
+          "context": "footer: | About",
+          "score": {
+            "semantic": 0.334,
+            "role": 1,
+            "context": 0,
+            "tag": 1,
+            "total": 0.467
+          }
+        },
+        {
+          "name": "Account",
+          "role": "link",
+          "context": "nav: Main | Cart (0)",
+          "score": {
+            "semantic": 0.152,
+            "role": 1,
+            "context": 0.592,
+            "tag": 1,
+            "total": 0.425
+          }
+        },
+        {
+          "name": "About",
+          "role": "link",
+          "context": "footer:",
+          "score": {
+            "semantic": 0.17,
+            "role": 1,
+            "context": 0,
+            "tag": 1,
+            "total": 0.365
+          }
+        }
+      ]
+    },
+    {
+      "page": "/checkout",
+      "target": {
+        "role": "link",
+        "name": "Account",
+        "context": "nav: Main | Cart (1)",
+        "id": "nav-account",
+        "testId": "nav-account"
+      },
+      "expected": "Account",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Account",
+      "candidates": []
+    },
+    {
+      "page": "/checkout",
+      "target": {
+        "role": "textbox",
+        "name": "Search products",
+        "context": "form:",
+        "id": "search-input",
+        "testId": "search-input"
+      },
+      "expected": "Search products",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Search products",
+      "candidates": []
+    },
+    {
+      "page": "/checkout",
+      "target": {
+        "role": "button",
+        "name": "Search",
+        "context": "form: | Search products",
+        "id": "search-btn",
+        "testId": "search-btn"
+      },
+      "expected": "Find",
+      "naive": false,
+      "healed": true,
+      "strategy": "healed",
+      "via": "semantic",
+      "score": 0.691,
+      "picked": "Find",
+      "candidates": [
+        {
+          "name": "Find",
+          "role": "button",
+          "context": "form: | Search products",
+          "score": {
+            "semantic": 0.501,
+            "role": 1,
+            "context": 1,
+            "tag": 1,
+            "total": 0.691
+          }
+        },
+        {
+          "name": "Subscribe",
+          "role": "button",
+          "context": "form: | Your email",
+          "score": {
+            "semantic": 0.471,
+            "role": 1,
+            "context": 0.239,
+            "tag": 1,
+            "total": 0.581
+          }
+        },
+        {
+          "name": "Place order",
+          "role": "button",
+          "context": "form: | PIN code",
+          "score": {
+            "semantic": 0.398,
+            "role": 1,
+            "context": 0.274,
+            "tag": 1,
+            "total": 0.54
+          }
+        },
+        {
+          "name": "Home",
+          "role": "link",
+          "context": "nav: Main",
+          "score": {
+            "semantic": 0.106,
+            "role": 0,
+            "context": 0.171,
+            "tag": 0,
+            "total": 0.086
+          }
+        },
+        {
+          "name": "Cart (0)",
+          "role": "link",
+          "context": "nav: Main | Home",
+          "score": {
+            "semantic": 0.063,
+            "role": 0,
+            "context": 0.137,
+            "tag": 0,
+            "total": 0.055
+          }
+        }
+      ]
+    },
+    {
+      "page": "/checkout",
+      "target": {
+        "role": "textbox",
+        "name": "Full name",
+        "context": "form:"
+      },
+      "expected": "Full name",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Full name",
+      "candidates": []
+    },
+    {
+      "page": "/checkout",
+      "target": {
+        "role": "textbox",
+        "name": "Email",
+        "context": "form:"
+      },
+      "expected": "Email",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Email",
+      "candidates": []
+    },
+    {
+      "page": "/checkout",
+      "target": {
+        "role": "textbox",
+        "name": "Address",
+        "context": "form:"
+      },
+      "expected": "Address",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Address",
+      "candidates": []
+    },
+    {
+      "page": "/checkout",
+      "target": {
+        "role": "textbox",
+        "name": "PIN code",
+        "context": "form:"
+      },
+      "expected": "PIN code",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "PIN code",
+      "candidates": []
+    },
+    {
+      "page": "/checkout",
+      "target": {
+        "role": "button",
+        "name": "Place order",
+        "context": "form: | PIN code",
+        "testId": "place-order"
+      },
+      "expected": "Place order",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Place order",
+      "candidates": []
+    },
+    {
+      "page": "/checkout",
+      "target": {
+        "role": "link",
+        "name": "About",
+        "context": "footer:"
+      },
+      "expected": "About",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "About",
+      "candidates": []
+    },
+    {
+      "page": "/checkout",
+      "target": {
+        "role": "link",
+        "name": "Careers",
+        "context": "footer: | About"
+      },
+      "expected": "Careers",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Careers",
+      "candidates": []
+    },
+    {
+      "page": "/checkout",
+      "target": {
+        "role": "textbox",
+        "name": "Newsletter email",
+        "context": "form:"
+      },
+      "expected": "Newsletter email",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Newsletter email",
+      "candidates": []
+    },
+    {
+      "page": "/checkout",
+      "target": {
+        "role": "button",
+        "name": "Subscribe",
+        "context": "form: | Your email"
+      },
+      "expected": "Subscribe",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Subscribe",
+      "candidates": []
+    },
+    {
+      "page": "/search?q=lamp",
+      "target": {
+        "role": "link",
+        "name": "Home",
+        "context": "nav: Main",
+        "id": "nav-home",
+        "testId": "nav-home"
+      },
+      "expected": "Home",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Home",
+      "candidates": []
+    },
+    {
+      "page": "/search?q=lamp",
+      "target": {
+        "role": "link",
+        "name": "Cart (1)",
+        "context": "nav: Main | Home",
+        "id": "nav-cart",
+        "testId": "nav-cart"
+      },
+      "expected": "Cart (0)",
+      "naive": false,
+      "healed": true,
+      "strategy": "healed",
+      "via": "semantic",
+      "score": 0.909,
+      "picked": "Cart (0)",
+      "candidates": [
+        {
+          "name": "Cart (0)",
+          "role": "link",
+          "context": "nav: Main | Home",
+          "score": {
+            "semantic": 0.854,
+            "role": 1,
+            "context": 1,
+            "tag": 1,
+            "total": 0.909
+          }
+        },
+        {
+          "name": "Home",
+          "role": "link",
+          "context": "nav: Main",
+          "score": {
+            "semantic": 0.28,
+            "role": 1,
+            "context": 0.8,
+            "tag": 1,
+            "total": 0.53
+          }
+        },
+        {
+          "name": "Careers",
+          "role": "link",
+          "context": "footer: | About",
+          "score": {
+            "semantic": 0.334,
+            "role": 1,
+            "context": 0,
+            "tag": 1,
+            "total": 0.467
+          }
+        },
+        {
+          "name": "Account",
+          "role": "link",
+          "context": "nav: Main | Cart (0)",
+          "score": {
+            "semantic": 0.152,
+            "role": 1,
+            "context": 0.592,
+            "tag": 1,
+            "total": 0.425
+          }
+        },
+        {
+          "name": "Desk Lamp",
+          "role": "link",
+          "context": "main: Results for “lamp”",
+          "score": {
+            "semantic": 0.174,
+            "role": 1,
+            "context": 0.256,
+            "tag": 1,
+            "total": 0.399
+          }
+        }
+      ]
+    },
+    {
+      "page": "/search?q=lamp",
+      "target": {
+        "role": "link",
+        "name": "Account",
+        "context": "nav: Main | Cart (1)",
+        "id": "nav-account",
+        "testId": "nav-account"
+      },
+      "expected": "Account",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Account",
+      "candidates": []
+    },
+    {
+      "page": "/search?q=lamp",
+      "target": {
+        "role": "textbox",
+        "name": "Search products",
+        "context": "form:",
+        "id": "search-input",
+        "testId": "search-input"
+      },
+      "expected": "Search products",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Search products",
+      "candidates": []
+    },
+    {
+      "page": "/search?q=lamp",
+      "target": {
+        "role": "button",
+        "name": "Search",
+        "context": "form: | Search products",
+        "id": "search-btn",
+        "testId": "search-btn"
+      },
+      "expected": "Find",
+      "naive": false,
+      "healed": true,
+      "strategy": "healed",
+      "via": "semantic",
+      "score": 0.691,
+      "picked": "Find",
+      "candidates": [
+        {
+          "name": "Find",
+          "role": "button",
+          "context": "form: | Search products",
+          "score": {
+            "semantic": 0.501,
+            "role": 1,
+            "context": 1,
+            "tag": 1,
+            "total": 0.691
+          }
+        },
+        {
+          "name": "Subscribe",
+          "role": "button",
+          "context": "form: | Your email",
+          "score": {
+            "semantic": 0.471,
+            "role": 1,
+            "context": 0.239,
+            "tag": 1,
+            "total": 0.581
+          }
+        },
+        {
+          "name": "Home",
+          "role": "link",
+          "context": "nav: Main",
+          "score": {
+            "semantic": 0.106,
+            "role": 0,
+            "context": 0.171,
+            "tag": 0,
+            "total": 0.086
+          }
+        },
+        {
+          "name": "Cart (0)",
+          "role": "link",
+          "context": "nav: Main | Home",
+          "score": {
+            "semantic": 0.063,
+            "role": 0,
+            "context": 0.137,
+            "tag": 0,
+            "total": 0.055
+          }
+        },
+        {
+          "name": "Account",
+          "role": "link",
+          "context": "nav: Main | Cart (0)",
+          "score": {
+            "semantic": 0.057,
+            "role": 0,
+            "context": 0.149,
+            "tag": 0,
+            "total": 0.053
+          }
+        }
+      ]
+    },
+    {
+      "page": "/search?q=lamp",
+      "target": {
+        "role": "link",
+        "name": "Desk Lamp",
+        "context": "main: Results for “lamp”"
+      },
+      "expected": "Desk Lamp",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Desk Lamp",
+      "candidates": []
+    },
+    {
+      "page": "/search?q=lamp",
+      "target": {
+        "role": "link",
+        "name": "About",
+        "context": "footer:"
+      },
+      "expected": "About",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "About",
+      "candidates": []
+    },
+    {
+      "page": "/search?q=lamp",
+      "target": {
+        "role": "link",
+        "name": "Careers",
+        "context": "footer: | About"
+      },
+      "expected": "Careers",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Careers",
+      "candidates": []
+    },
+    {
+      "page": "/search?q=lamp",
+      "target": {
+        "role": "textbox",
+        "name": "Newsletter email",
+        "context": "form:"
+      },
+      "expected": "Newsletter email",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Newsletter email",
+      "candidates": []
+    },
+    {
+      "page": "/search?q=lamp",
+      "target": {
+        "role": "button",
+        "name": "Subscribe",
+        "context": "form: | Your email"
+      },
+      "expected": "Subscribe",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Subscribe",
+      "candidates": []
+    },
+    {
+      "page": "/login",
+      "target": {
+        "role": "link",
+        "name": "Home",
+        "context": "nav: Main",
+        "id": "nav-home",
+        "testId": "nav-home"
+      },
+      "expected": "Home",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Home",
+      "candidates": []
+    },
+    {
+      "page": "/login",
+      "target": {
+        "role": "link",
+        "name": "Cart (1)",
+        "context": "nav: Main | Home",
+        "id": "nav-cart",
+        "testId": "nav-cart"
+      },
+      "expected": "Cart (0)",
+      "naive": false,
+      "healed": true,
+      "strategy": "healed",
+      "via": "semantic",
+      "score": 0.909,
+      "picked": "Cart (0)",
+      "candidates": [
+        {
+          "name": "Cart (0)",
+          "role": "link",
+          "context": "nav: Main | Home",
+          "score": {
+            "semantic": 0.854,
+            "role": 1,
+            "context": 1,
+            "tag": 1,
+            "total": 0.909
+          }
+        },
+        {
+          "name": "Home",
+          "role": "link",
+          "context": "nav: Main",
+          "score": {
+            "semantic": 0.28,
+            "role": 1,
+            "context": 0.8,
+            "tag": 1,
+            "total": 0.53
+          }
+        },
+        {
+          "name": "Careers",
+          "role": "link",
+          "context": "footer: | About",
+          "score": {
+            "semantic": 0.334,
+            "role": 1,
+            "context": 0,
+            "tag": 1,
+            "total": 0.467
+          }
+        },
+        {
+          "name": "Account",
+          "role": "link",
+          "context": "nav: Main | Cart (0)",
+          "score": {
+            "semantic": 0.152,
+            "role": 1,
+            "context": 0.592,
+            "tag": 1,
+            "total": 0.425
+          }
+        },
+        {
+          "name": "About",
+          "role": "link",
+          "context": "footer:",
+          "score": {
+            "semantic": 0.17,
+            "role": 1,
+            "context": 0,
+            "tag": 1,
+            "total": 0.365
+          }
+        }
+      ]
+    },
+    {
+      "page": "/login",
+      "target": {
+        "role": "link",
+        "name": "Account",
+        "context": "nav: Main | Cart (1)",
+        "id": "nav-account",
+        "testId": "nav-account"
+      },
+      "expected": "Account",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Account",
+      "candidates": []
+    },
+    {
+      "page": "/login",
+      "target": {
+        "role": "textbox",
+        "name": "Search products",
+        "context": "form:",
+        "id": "search-input",
+        "testId": "search-input"
+      },
+      "expected": "Search products",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Search products",
+      "candidates": []
+    },
+    {
+      "page": "/login",
+      "target": {
+        "role": "button",
+        "name": "Search",
+        "context": "form: | Search products",
+        "id": "search-btn",
+        "testId": "search-btn"
+      },
+      "expected": "Find",
+      "naive": false,
+      "healed": true,
+      "strategy": "healed",
+      "via": "semantic",
+      "score": 0.691,
+      "picked": "Find",
+      "candidates": [
+        {
+          "name": "Find",
+          "role": "button",
+          "context": "form: | Search products",
+          "score": {
+            "semantic": 0.501,
+            "role": 1,
+            "context": 1,
+            "tag": 1,
+            "total": 0.691
+          }
+        },
+        {
+          "name": "Log in",
+          "role": "button",
+          "context": "form: | Password",
+          "score": {
+            "semantic": 0.524,
+            "role": 1,
+            "context": 0.299,
+            "tag": 1,
+            "total": 0.621
+          }
+        },
+        {
+          "name": "Subscribe",
+          "role": "button",
+          "context": "form: | Your email",
+          "score": {
+            "semantic": 0.471,
+            "role": 1,
+            "context": 0.239,
+            "tag": 1,
+            "total": 0.581
+          }
+        },
+        {
+          "name": "Home",
+          "role": "link",
+          "context": "nav: Main",
+          "score": {
+            "semantic": 0.106,
+            "role": 0,
+            "context": 0.171,
+            "tag": 0,
+            "total": 0.086
+          }
+        },
+        {
+          "name": "Cart (0)",
+          "role": "link",
+          "context": "nav: Main | Home",
+          "score": {
+            "semantic": 0.063,
+            "role": 0,
+            "context": 0.137,
+            "tag": 0,
+            "total": 0.055
+          }
+        }
+      ]
+    },
+    {
+      "page": "/login",
+      "target": {
+        "role": "textbox",
+        "name": "Email",
+        "context": "form:"
+      },
+      "expected": "Email",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Email",
+      "candidates": []
+    },
+    {
+      "page": "/login",
+      "target": {
+        "role": "textbox",
+        "name": "Password",
+        "context": "form:"
+      },
+      "expected": "Password",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Password",
+      "candidates": []
+    },
+    {
+      "page": "/login",
+      "target": {
+        "role": "button",
+        "name": "Log in",
+        "context": "form: | Password"
+      },
+      "expected": "Log in",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Log in",
+      "candidates": []
+    },
+    {
+      "page": "/login",
+      "target": {
+        "role": "link",
+        "name": "About",
+        "context": "footer:"
+      },
+      "expected": "About",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "About",
+      "candidates": []
+    },
+    {
+      "page": "/login",
+      "target": {
+        "role": "link",
+        "name": "Careers",
+        "context": "footer: | About"
+      },
+      "expected": "Careers",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Careers",
+      "candidates": []
+    },
+    {
+      "page": "/login",
+      "target": {
+        "role": "textbox",
+        "name": "Newsletter email",
+        "context": "form:"
+      },
+      "expected": "Newsletter email",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Newsletter email",
+      "candidates": []
+    },
+    {
+      "page": "/login",
+      "target": {
+        "role": "button",
+        "name": "Subscribe",
+        "context": "form: | Your email"
+      },
+      "expected": "Subscribe",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Subscribe",
+      "candidates": []
+    },
+    {
+      "page": "/about",
+      "target": {
+        "role": "link",
+        "name": "Home",
+        "context": "nav: Main",
+        "id": "nav-home",
+        "testId": "nav-home"
+      },
+      "expected": "Home",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Home",
+      "candidates": []
+    },
+    {
+      "page": "/about",
+      "target": {
+        "role": "link",
+        "name": "Cart (1)",
+        "context": "nav: Main | Home",
+        "id": "nav-cart",
+        "testId": "nav-cart"
+      },
+      "expected": "Cart (0)",
+      "naive": false,
+      "healed": true,
+      "strategy": "healed",
+      "via": "semantic",
+      "score": 0.909,
+      "picked": "Cart (0)",
+      "candidates": [
+        {
+          "name": "Cart (0)",
+          "role": "link",
+          "context": "nav: Main | Home",
+          "score": {
+            "semantic": 0.854,
+            "role": 1,
+            "context": 1,
+            "tag": 1,
+            "total": 0.909
+          }
+        },
+        {
+          "name": "Home",
+          "role": "link",
+          "context": "nav: Main",
+          "score": {
+            "semantic": 0.28,
+            "role": 1,
+            "context": 0.8,
+            "tag": 1,
+            "total": 0.53
+          }
+        },
+        {
+          "name": "Careers",
+          "role": "link",
+          "context": "footer: | About",
+          "score": {
+            "semantic": 0.334,
+            "role": 1,
+            "context": 0,
+            "tag": 1,
+            "total": 0.467
+          }
+        },
+        {
+          "name": "Account",
+          "role": "link",
+          "context": "nav: Main | Cart (0)",
+          "score": {
+            "semantic": 0.152,
+            "role": 1,
+            "context": 0.592,
+            "tag": 1,
+            "total": 0.425
+          }
+        },
+        {
+          "name": "About",
+          "role": "link",
+          "context": "footer:",
+          "score": {
+            "semantic": 0.17,
+            "role": 1,
+            "context": 0,
+            "tag": 1,
+            "total": 0.365
+          }
+        }
+      ]
+    },
+    {
+      "page": "/about",
+      "target": {
+        "role": "link",
+        "name": "Account",
+        "context": "nav: Main | Cart (1)",
+        "id": "nav-account",
+        "testId": "nav-account"
+      },
+      "expected": "Account",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Account",
+      "candidates": []
+    },
+    {
+      "page": "/about",
+      "target": {
+        "role": "textbox",
+        "name": "Search products",
+        "context": "form:",
+        "id": "search-input",
+        "testId": "search-input"
+      },
+      "expected": "Search products",
+      "naive": false,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Search products",
+      "candidates": []
+    },
+    {
+      "page": "/about",
+      "target": {
+        "role": "button",
+        "name": "Search",
+        "context": "form: | Search products",
+        "id": "search-btn",
+        "testId": "search-btn"
+      },
+      "expected": "Find",
+      "naive": false,
+      "healed": true,
+      "strategy": "healed",
+      "via": "semantic",
+      "score": 0.691,
+      "picked": "Find",
+      "candidates": [
+        {
+          "name": "Find",
+          "role": "button",
+          "context": "form: | Search products",
+          "score": {
+            "semantic": 0.501,
+            "role": 1,
+            "context": 1,
+            "tag": 1,
+            "total": 0.691
+          }
+        },
+        {
+          "name": "Subscribe",
+          "role": "button",
+          "context": "form: | Your email",
+          "score": {
+            "semantic": 0.471,
+            "role": 1,
+            "context": 0.239,
+            "tag": 1,
+            "total": 0.581
+          }
+        },
+        {
+          "name": "Home",
+          "role": "link",
+          "context": "nav: Main",
+          "score": {
+            "semantic": 0.106,
+            "role": 0,
+            "context": 0.171,
+            "tag": 0,
+            "total": 0.086
+          }
+        },
+        {
+          "name": "Cart (0)",
+          "role": "link",
+          "context": "nav: Main | Home",
+          "score": {
+            "semantic": 0.063,
+            "role": 0,
+            "context": 0.137,
+            "tag": 0,
+            "total": 0.055
+          }
+        },
+        {
+          "name": "Account",
+          "role": "link",
+          "context": "nav: Main | Cart (0)",
+          "score": {
+            "semantic": 0.057,
+            "role": 0,
+            "context": 0.149,
+            "tag": 0,
+            "total": 0.053
+          }
+        }
+      ]
+    },
+    {
+      "page": "/about",
+      "target": {
+        "role": "link",
+        "name": "About",
+        "context": "footer:"
+      },
+      "expected": "About",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "About",
+      "candidates": []
+    },
+    {
+      "page": "/about",
+      "target": {
+        "role": "link",
+        "name": "Careers",
+        "context": "footer: | About"
+      },
+      "expected": "Careers",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Careers",
+      "candidates": []
+    },
+    {
+      "page": "/about",
+      "target": {
+        "role": "textbox",
+        "name": "Newsletter email",
+        "context": "form:"
+      },
+      "expected": "Newsletter email",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Newsletter email",
+      "candidates": []
+    },
+    {
+      "page": "/about",
+      "target": {
+        "role": "button",
+        "name": "Subscribe",
+        "context": "form: | Your email"
+      },
+      "expected": "Subscribe",
+      "naive": true,
+      "healed": true,
+      "strategy": "exact",
+      "via": "cssPath",
+      "score": 1,
+      "picked": "Subscribe",
+      "candidates": []
+    }
+  ]
+}

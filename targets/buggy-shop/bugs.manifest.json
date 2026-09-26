@@ -1,0 +1,76 @@
+{
+  "app": "buggy-shop",
+  "description": "Ground truth for recall measurement. Each bug lists the anomaly type the engine should report and a URL/message pattern that identifies it.",
+  "bugs": [
+    {
+      "id": "B01",
+      "title": "Product 4 page returns HTTP 500",
+      "type": "server_error",
+      "match": { "url": "/product/4" },
+      "detectableBy": "heuristic"
+    },
+    {
+      "id": "B02",
+      "title": "Empty search logs a console error",
+      "type": "console_error",
+      "match": { "url": "/search", "message": "SearchAnalytics" },
+      "detectableBy": "heuristic"
+    },
+    {
+      "id": "B03",
+      "title": "Add to cart on Desk Lamp hits a 404 API",
+      "type": "network_failure",
+      "match": { "message": "/api/cart/items" },
+      "detectableBy": "heuristic"
+    },
+    {
+      "id": "B04",
+      "title": "Checkout accepts an empty form and places an order",
+      "type": "llm_judged",
+      "match": { "url": "/checkout" },
+      "detectableBy": "llm"
+    },
+    {
+      "id": "B05",
+      "title": "Footer Careers link is a 404",
+      "type": "broken_link",
+      "match": { "url": "/careers" },
+      "detectableBy": "heuristic"
+    },
+    {
+      "id": "B06",
+      "title": "Water bottle image fails to load",
+      "type": "broken_image",
+      "match": { "message": "bottle-missing" },
+      "detectableBy": "heuristic"
+    },
+    {
+      "id": "B07",
+      "title": "Apply coupon throws an uncaught exception",
+      "type": "page_error",
+      "match": { "url": "/cart", "message": "validate" },
+      "detectableBy": "heuristic"
+    },
+    {
+      "id": "B08",
+      "title": "Cart total shows NaN after removing an item",
+      "type": "suspicious_text",
+      "match": { "url": "/cart", "message": "NaN" },
+      "detectableBy": "heuristic"
+    },
+    {
+      "id": "B09",
+      "title": "Newsletter confirmation shows [object Object]",
+      "type": "suspicious_text",
+      "match": { "url": "/newsletter", "message": "[object Object]" },
+      "detectableBy": "heuristic"
+    },
+    {
+      "id": "B10",
+      "title": "Recommendations API takes over 3 seconds",
+      "type": "slow_response",
+      "match": { "message": "/api/recommendations" },
+      "detectableBy": "heuristic"
+    }
+  ]
+}

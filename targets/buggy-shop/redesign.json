@@ -1,0 +1,10 @@
+{
+  "description": "Layout v2 of buggy-shop (LAYOUT_VERSION=2): renamed ids, removed test ids, reworded labels. Used as the ground truth for the self-healing benchmark.",
+  "pages": ["/", "/product/1", "/product/3", "/cart", "/checkout", "/search?q=lamp", "/login", "/about"],
+  "renamed": {
+    "add to cart": "add to bag",
+    "checkout": "proceed to checkout",
+    "apply coupon": "redeem code",
+    "search": "find"
+  }
+}

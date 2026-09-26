@@ -1,0 +1,400 @@
+[
+  {
+    "id": "sweep-redesign",
+    "sourceRunId": "demo",
+    "target": "http://localhost:4101",
+    "label": "Redesign",
+    "status": "finished",
+    "createdAt": 1790427147164,
+    "finishedAt": 1790427147164,
+    "items": [
+      {
+        "bugId": "NLE-001",
+        "title": "Broken image on /",
+        "severity": "minor",
+        "verdict": "still broken",
+        "reproduced": "3/3",
+        "replayedOn": "http://localhost:4101/",
+        "heals": []
+      },
+      {
+        "bugId": "NLE-002",
+        "title": "Slow API response on /",
+        "severity": "minor",
+        "verdict": "still broken",
+        "reproduced": "3/3",
+        "replayedOn": "http://localhost:4101/",
+        "heals": []
+      },
+      {
+        "bugId": "NLE-003",
+        "title": "Broken link on /careers",
+        "severity": "major",
+        "verdict": "still broken",
+        "reproduced": "3/3",
+        "replayedOn": "http://localhost:4101/careers",
+        "heals": []
+      },
+      {
+        "bugId": "NLE-004",
+        "title": "Suspicious text on /newsletter after “Subscribe”",
+        "severity": "major",
+        "verdict": "still broken",
+        "reproduced": "3/3",
+        "replayedOn": "http://localhost:4101/careers",
+        "heals": [
+          {
+            "step": 0,
+            "target": {
+              "name": "Subscribe",
+              "role": "button",
+              "context": "form: | Your email"
+            },
+            "strategy": "exact",
+            "via": "cssPath",
+            "score": 1,
+            "matched": "Subscribe",
+            "candidates": []
+          }
+        ]
+      },
+      {
+        "bugId": "NLE-005",
+        "title": "Console error on /search",
+        "severity": "minor",
+        "verdict": "still broken",
+        "reproduced": "3/3",
+        "replayedOn": "http://localhost:4101/search?q=",
+        "heals": []
+      },
+      {
+        "bugId": "NLE-006",
+        "title": "Server error on /product/4",
+        "severity": "critical",
+        "verdict": "still broken",
+        "reproduced": "3/3",
+        "replayedOn": "http://localhost:4101/product/4",
+        "heals": []
+      },
+      {
+        "bugId": "NLE-007",
+        "title": "Failed API request on /product/3 after “Add to cart”",
+        "severity": "major",
+        "verdict": "still broken",
+        "reproduced": "3/3",
+        "replayedOn": "http://localhost:4101/product/3",
+        "heals": [
+          {
+            "step": 0,
+            "target": {
+              "name": "Add to cart",
+              "role": "button",
+              "context": "main: Desk Lamp | Price: ₹2199",
+              "id": "add-to-cart",
+              "testId": "add-to-cart"
+            },
+            "strategy": "healed",
+            "via": "semantic",
+            "score": 0.843,
+            "matched": "Add to bag",
+            "candidates": [
+              {
+                "name": "Add to bag",
+                "role": "button",
+                "context": "main: Desk Lamp | Price: ₹2199",
+                "score": {
+                  "semantic": 0.746,
+                  "role": 1,
+                  "context": 1,
+                  "tag": 1,
+                  "total": 0.843
+                }
+              },
+              {
+                "name": "Find",
+                "role": "button",
+                "context": "form: | Search products",
+                "score": {
+                  "semantic": 0.393,
+                  "role": 1,
+                  "context": 0.026,
+                  "tag": 1,
+                  "total": 0.507
+                }
+              },
+              {
+                "name": "Subscribe",
+                "role": "button",
+                "context": "form: | Your email",
+                "score": {
+                  "semantic": 0.336,
+                  "role": 1,
+                  "context": 0.052,
+                  "tag": 1,
+                  "total": 0.475
+                }
+              },
+              {
+                "name": "Cart (0)",
+                "role": "link",
+                "context": "nav: Main | Home",
+                "score": {
+                  "semantic": 0.396,
+                  "role": 0,
+                  "context": 0.239,
+                  "tag": 0,
+                  "total": 0.274
+                }
+              },
+              {
+                "name": "Careers",
+                "role": "link",
+                "context": "footer: | About",
+                "score": {
+                  "semantic": 0.093,
+                  "role": 0,
+                  "context": 0,
+                  "tag": 0,
+                  "total": 0.058
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bugId": "NLE-008",
+        "title": "Uncaught exception on /cart after “Apply coupon”",
+        "severity": "critical",
+        "verdict": "still broken",
+        "reproduced": "3/3",
+        "replayedOn": "http://localhost:4101/cart",
+        "heals": [
+          {
+            "step": 0,
+            "target": {
+              "name": "Apply coupon",
+              "role": "button",
+              "context": "main: Your cart | Coupon Coupon code",
+              "id": "apply-coupon",
+              "testId": "apply-coupon"
+            },
+            "strategy": "healed",
+            "via": "semantic",
+            "score": 0.621,
+            "matched": "Redeem code",
+            "candidates": [
+              {
+                "name": "Redeem code",
+                "role": "button",
+                "context": "main: Your cart | Coupon Coupon code",
+                "score": {
+                  "semantic": 0.388,
+                  "role": 1,
+                  "context": 1,
+                  "tag": 1,
+                  "total": 0.621
+                }
+              },
+              {
+                "name": "Subscribe",
+                "role": "button",
+                "context": "form: | Your email",
+                "score": {
+                  "semantic": 0.431,
+                  "role": 1,
+                  "context": 0.248,
+                  "tag": 1,
+                  "total": 0.557
+                }
+              },
+              {
+                "name": "Find",
+                "role": "button",
+                "context": "form: | Search products",
+                "score": {
+                  "semantic": 0.465,
+                  "role": 1,
+                  "context": 0.038,
+                  "tag": 1,
+                  "total": 0.553
+                }
+              },
+              {
+                "name": "Proceed to checkout",
+                "role": "link",
+                "context": "main: Your cart",
+                "score": {
+                  "semantic": 0.038,
+                  "role": 0,
+                  "context": 0.56,
+                  "tag": 0,
+                  "total": 0.091
+                }
+              },
+              {
+                "name": "Account",
+                "role": "link",
+                "context": "nav: Main | Cart (0)",
+                "score": {
+                  "semantic": 0.044,
+                  "role": 0,
+                  "context": 0.363,
+                  "tag": 0,
+                  "total": 0.071
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bugId": "NLE-009",
+        "title": "Suspicious text on /cart",
+        "severity": "major",
+        "verdict": "still broken",
+        "reproduced": "3/3",
+        "replayedOn": "http://localhost:4101/cart?removed=1",
+        "heals": []
+      }
+    ]
+  },
+  {
+    "id": "sweep-fixed-build",
+    "sourceRunId": "demo",
+    "target": "http://localhost:4102",
+    "label": "Fixed build",
+    "status": "finished",
+    "createdAt": 1790427168258,
+    "finishedAt": 1790427168258,
+    "items": [
+      {
+        "bugId": "NLE-001",
+        "title": "Broken image on /",
+        "severity": "minor",
+        "verdict": "fixed",
+        "reproduced": "0/3",
+        "replayedOn": "http://localhost:4102/",
+        "heals": []
+      },
+      {
+        "bugId": "NLE-002",
+        "title": "Slow API response on /",
+        "severity": "minor",
+        "verdict": "fixed",
+        "reproduced": "0/3",
+        "replayedOn": "http://localhost:4102/",
+        "heals": []
+      },
+      {
+        "bugId": "NLE-003",
+        "title": "Broken link on /careers",
+        "severity": "major",
+        "verdict": "fixed",
+        "reproduced": "0/3",
+        "replayedOn": "http://localhost:4102/careers",
+        "heals": []
+      },
+      {
+        "bugId": "NLE-004",
+        "title": "Suspicious text on /newsletter after “Subscribe”",
+        "severity": "major",
+        "verdict": "fixed",
+        "reproduced": "0/3",
+        "replayedOn": "http://localhost:4102/careers",
+        "heals": [
+          {
+            "step": 0,
+            "target": {
+              "name": "Subscribe",
+              "role": "button",
+              "context": "form: | Your email"
+            },
+            "strategy": "exact",
+            "via": "cssPath",
+            "score": 1,
+            "matched": "Subscribe",
+            "candidates": []
+          }
+        ]
+      },
+      {
+        "bugId": "NLE-005",
+        "title": "Console error on /search",
+        "severity": "minor",
+        "verdict": "fixed",
+        "reproduced": "0/3",
+        "replayedOn": "http://localhost:4102/search?q=",
+        "heals": []
+      },
+      {
+        "bugId": "NLE-006",
+        "title": "Server error on /product/4",
+        "severity": "critical",
+        "verdict": "fixed",
+        "reproduced": "0/3",
+        "replayedOn": "http://localhost:4102/product/4",
+        "heals": []
+      },
+      {
+        "bugId": "NLE-007",
+        "title": "Failed API request on /product/3 after “Add to cart”",
+        "severity": "major",
+        "verdict": "fixed",
+        "reproduced": "0/3",
+        "replayedOn": "http://localhost:4102/product/3",
+        "heals": [
+          {
+            "step": 0,
+            "target": {
+              "name": "Add to cart",
+              "role": "button",
+              "context": "main: Desk Lamp | Price: ₹2199",
+              "id": "add-to-cart",
+              "testId": "add-to-cart"
+            },
+            "strategy": "exact",
+            "via": "testId",
+            "score": 1,
+            "matched": "Add to cart",
+            "candidates": []
+          }
+        ]
+      },
+      {
+        "bugId": "NLE-008",
+        "title": "Uncaught exception on /cart after “Apply coupon”",
+        "severity": "critical",
+        "verdict": "fixed",
+        "reproduced": "0/3",
+        "replayedOn": "http://localhost:4102/cart",
+        "heals": [
+          {
+            "step": 0,
+            "target": {
+              "name": "Apply coupon",
+              "role": "button",
+              "context": "main: Your cart | Coupon Coupon code",
+              "id": "apply-coupon",
+              "testId": "apply-coupon"
+            },
+            "strategy": "exact",
+            "via": "testId",
+            "score": 1,
+            "matched": "Apply coupon",
+            "candidates": []
+          }
+        ]
+      },
+      {
+        "bugId": "NLE-009",
+        "title": "Suspicious text on /cart",
+        "severity": "major",
+        "verdict": "fixed",
+        "reproduced": "0/3",
+        "replayedOn": "http://localhost:4102/cart?removed=1",
+        "heals": []
+      }
+    ]
+  }
+]

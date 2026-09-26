@@ -1,0 +1,52 @@
+name: Nomad Loop Engine scan
+description: Explore a running web app, report bugs with reproducible Playwright tests, and fail on confirmed bugs.
+branding:
+  icon: compass
+  color: orange
+
+inputs:
+  url:
+    description: Start URL of the app under test (it must already be running).
+    required: true
+  steps:
+    description: Maximum exploration steps.
+    default: '60'
+  fail-on:
+    description: Fail when a confirmed bug of this severity or worse is found (minor, major, critical). Empty to never fail.
+    default: major
+  ml-url:
+    description: Optional ML service URL (trained ranker, embeddings, local LLM).
+    default: ''
+
+outputs:
+  run-dir:
+    description: Folder with events, bug reports, screenshots and generated tests.
+    value: ${{ steps.scan.outputs.run-dir }}
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v4
+      with: { node-version: '22' }
+    - name: Install Nomad
+      shell: bash
+      working-directory: ${{ github.action_path }}
+      run: |
+        npm ci --no-audit --no-fund
+        npx playwright install --with-deps chromium
+        npx turbo run build --filter=@nomad/engine...
+    - name: Scan
+      id: scan
+      shell: bash
+      run: |
+        dir="${{ runner.temp }}/nomad"
+        args=(scan "${{ inputs.url }}" --steps "${{ inputs.steps }}" --out "$dir" --run-id scan)
+        [ -n "${{ inputs.fail-on }}" ] && args+=(--fail-on "${{ inputs.fail-on }}")
+        [ -n "${{ inputs.ml-url }}" ] && args+=(--ml-url "${{ inputs.ml-url }}")
+        echo "run-dir=$dir/scan" >> "$GITHUB_OUTPUT"
+        node "${{ github.action_path }}/packages/engine/dist/cli/nomad.js" "${args[@]}"
+    - uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: nomad-scan
+        path: ${{ runner.temp }}/nomad/scan

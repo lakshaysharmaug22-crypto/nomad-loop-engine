@@ -1,0 +1,21 @@
+node_modules/
+dist/
+.next/
+.turbo/
+.venv/
+__pycache__/
+.pytest_cache/
+*.tsbuildinfo
+test-results/
+playwright-report/
+
+# Run output (the dashboard's demo data in apps/web/public/demo is committed)
+runs/
+/data/
+apps/api/data/
+benchmarks/runs/
+
+.env
+.env.local
+*.log
+.DS_Store

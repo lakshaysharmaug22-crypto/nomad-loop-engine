@@ -1,0 +1,15 @@
+{
+  "name": "buggy-shop",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Seeded target app with planted bugs and a ground-truth manifest, used to measure Nomad Loop Engine's recall.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:v2": "node server.js --layout 2 --port 4101",
+    "start:fixed": "node server.js --no-bugs --port 4102"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

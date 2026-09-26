@@ -1,0 +1,119 @@
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 16px;
+  padding: 10px 12px;
+  border-top: 1px solid var(--line-soft);
+  background: var(--panel);
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.play {
+  min-width: 96px;
+  justify-content: center;
+  background: var(--ink);
+  color: var(--ground);
+  border-color: var(--ink);
+}
+.play:hover {
+  border-color: var(--ink);
+  opacity: 0.92;
+}
+.speed {
+  display: inline-flex;
+  margin-left: 6px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.speed button {
+  height: 32px;
+  padding: 0 10px;
+  border: 0;
+  background: var(--panel);
+  cursor: pointer;
+  font: 500 12.5px var(--mono);
+  color: var(--muted);
+}
+.speed button[aria-pressed='true'] {
+  background: var(--raised);
+  color: var(--ink);
+}
+
+.scrub {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.track {
+  position: relative;
+  flex: 1;
+  height: 28px;
+  display: flex;
+  align-items: center;
+}
+.track input {
+  width: 100%;
+  margin: 0;
+  accent-color: var(--signal);
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+.marks {
+  position: absolute;
+  inset: 0 8px;
+  pointer-events: none;
+}
+.marks i {
+  position: absolute;
+  top: 2px;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  border-radius: 50%;
+  opacity: 0.35;
+  transition: opacity 0.3s;
+}
+.marks i[data-past] {
+  opacity: 1;
+}
+.pos {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font: 500 12.5px var(--mono);
+  min-width: 74px;
+  justify-content: flex-end;
+}
+.pos span {
+  color: var(--faint);
+}
+.pos .live {
+  padding: 0 6px;
+  border-radius: 4px;
+  background: var(--ok-soft);
+  color: var(--ok);
+  font-size: 11px;
+}
+.keys {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--faint);
+  font-size: 11.5px;
+}
+.keys kbd + kbd {
+  margin-left: -1px;
+}
+@media (max-width: 1100px) {
+  .keys {
+    display: none;
+  }
+}
