@@ -10,7 +10,7 @@ test-results/
 playwright-report/
 
 # Run output (the dashboard's demo data in apps/web/public/demo is committed)
-runs/
+/runs/
 /data/
 apps/api/data/
 benchmarks/runs/

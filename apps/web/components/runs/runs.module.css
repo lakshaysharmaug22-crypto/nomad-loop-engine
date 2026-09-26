@@ -1,0 +1,144 @@
+.page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+  max-width: 1480px;
+  margin: 0 auto;
+}
+.demoNote {
+  color: var(--muted);
+  font-size: 12.5px;
+  padding: 6px 10px;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, auto)) minmax(260px, 1.6fr);
+  align-items: stretch;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.sumItem,
+.sumTiers {
+  display: grid;
+  align-content: start;
+  gap: 6px;
+  padding: 14px 20px 16px;
+  border-left: 1px solid var(--line-soft);
+}
+.sumItem:first-child {
+  border-left: 0;
+}
+.sumLabel {
+  font: 600 10.5px var(--mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--faint);
+  white-space: nowrap;
+}
+.sumValue {
+  font: 600 24px/1.05 var(--sans);
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+@media (max-width: 1100px) {
+  .summary {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .sumTiers {
+    grid-column: 1 / -1;
+    border-left: 0;
+    border-top: 1px solid var(--line-soft);
+  }
+}
+@media (max-width: 640px) {
+  .summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .sumItem:nth-child(odd) {
+    border-left: 0;
+  }
+  .sumItem:nth-child(n + 3) {
+    border-top: 1px solid var(--line-soft);
+  }
+  .sumItem:nth-child(5) {
+    grid-column: 1 / -1;
+  }
+}
+
+.tableWrap {
+  overflow-x: auto;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.table th {
+  text-align: left;
+  font: 600 10.5px var(--mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--faint);
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+.table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line-soft);
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.table tbody tr {
+  cursor: pointer;
+  transition: background 0.12s;
+}
+.table tbody tr:hover {
+  background: var(--raised);
+}
+.table tbody tr:last-child td {
+  border-bottom: 0;
+}
+.num {
+  text-align: right !important;
+}
+.runCell {
+  display: grid;
+  gap: 2px;
+}
+.runHost {
+  font-weight: 600;
+}
+.runId {
+  font: 12px var(--mono);
+  color: var(--muted);
+}
+.policy {
+  font-size: 12px;
+  color: var(--ink-2);
+}
+.bugCount {
+  color: var(--signal);
+  font-weight: 600;
+}
+.tiers {
+  width: 160px;
+  min-width: 120px;
+}
+.when {
+  color: var(--muted);
+}
+.empty {
+  padding: 24px;
+  margin: 0;
+  color: var(--muted);
+}

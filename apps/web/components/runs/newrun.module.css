@@ -1,0 +1,73 @@
+.form {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  animation: open 0.25s var(--ease);
+}
+@keyframes open {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.head h2 {
+  font-size: 15px;
+}
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 110px 140px auto;
+  align-items: start;
+  gap: 12px;
+}
+.row > button {
+  margin-top: 21px;
+}
+.field {
+  display: grid;
+  gap: 5px;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.field input {
+  height: 36px;
+  padding: 0 10px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--sunken);
+  color: var(--ink);
+  font: 13.5px var(--mono);
+}
+.field input:focus {
+  outline: none;
+  border-color: var(--signal);
+  box-shadow: 0 0 0 3px var(--signal-soft);
+}
+.field input[aria-invalid='true'] {
+  border-color: var(--critical);
+}
+.err {
+  font-style: normal;
+  color: var(--critical);
+  font-size: 12px;
+  margin: 0;
+}
+@media (max-width: 720px) {
+  .row {
+    grid-template-columns: 1fr 1fr;
+  }
+  .row > label:first-child {
+    grid-column: 1 / -1;
+  }
+  .row > button {
+    grid-column: 1 / -1;
+    margin-top: 0;
+  }
+}
