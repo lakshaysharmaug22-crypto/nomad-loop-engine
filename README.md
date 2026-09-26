@@ -1,5 +1,7 @@
 # Nomad Loop Engine
 
+**[Live demo →](https://nomad-loop-engine.vercel.app)** · recorded runs, decision traces, bug evidence and benchmarks, nothing to install.
+
 Autonomous exploratory testing for web apps. Nomad explores an application the way a user would, finds bugs, and hands back a Playwright test for each one. When the UI changes underneath it, it finds its elements again by meaning instead of failing on stale selectors.
 
 ![Replay of a run: the state graph grows step by step while the decision trace shows which tier chose each action](docs/images/replay.gif)
