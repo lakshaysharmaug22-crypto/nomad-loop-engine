@@ -5,7 +5,10 @@ import { Shell } from '@/components/shell/Shell';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ??
+      (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : 'http://localhost:3000'),
+  ),
   title: { default: 'Nomad Loop Engine', template: '%s · Nomad Loop Engine' },
   description: 'Autonomous exploratory testing: explores web apps like a user, finds bugs, and writes reproducible Playwright tests.',
 };

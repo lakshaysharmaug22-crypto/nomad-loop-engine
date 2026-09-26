@@ -10,6 +10,8 @@ import { CommandPalette, openPalette } from './CommandPalette';
 import { Logo } from './Logo';
 import s from './shell.module.css';
 
+const REPO_URL = process.env.NEXT_PUBLIC_REPO_URL ?? 'https://github.com/lakshaysharmaug22-crypto/nomad-loop-engine';
+
 const NAV = [
   { href: '/', label: 'Overview', match: (p: string) => p === '/' },
   { href: '/runs', label: 'Runs', match: (p: string) => p.startsWith('/runs') },
@@ -123,8 +125,8 @@ export function Shell({ children }: { children: React.ReactNode }) {
               API
             </a>
           )}
-          {process.env.NEXT_PUBLIC_REPO_URL && (
-            <a className={s.docs} href={process.env.NEXT_PUBLIC_REPO_URL} target="_blank" rel="noreferrer">
+          {REPO_URL && (
+            <a className={s.docs} href={REPO_URL} target="_blank" rel="noreferrer">
               Source
             </a>
           )}
