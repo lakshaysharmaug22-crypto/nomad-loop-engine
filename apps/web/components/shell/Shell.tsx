@@ -17,6 +17,7 @@ const NAV = [
   { href: '/runs', label: 'Runs', match: (p: string) => p.startsWith('/runs') },
   { href: '/benchmarks', label: 'Benchmarks', match: (p: string) => p.startsWith('/benchmarks') },
   { href: '/healing', label: 'Self-healing', match: (p: string) => p.startsWith('/healing') },
+  { href: '/target', label: 'Live target', match: (p: string) => p.startsWith('/target') },
 ];
 
 function ThemeButton() {

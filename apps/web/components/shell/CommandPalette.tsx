@@ -136,6 +136,14 @@ export function CommandPalette() {
       { id: 'p-runs', group: 'Pages', title: 'Runs', hint: 'Every recorded and live exploration', run: go('/runs') },
       { id: 'p-bench', group: 'Pages', title: 'Benchmarks', hint: 'Policies, ranker, healing, sweeps', run: go('/benchmarks') },
       { id: 'p-heal', group: 'Pages', title: 'Self-healing', hint: 'Candidate scores across a redesign', run: go('/healing') },
+      {
+        id: 'p-target',
+        group: 'Pages',
+        title: 'Live target: Vayu Pramaan',
+        hint: 'Findings on a real deployed site',
+        keywords: 'vayu pramaan production release gate',
+        run: go('/target'),
+      },
     ];
     for (const r of runs) {
       out.push({

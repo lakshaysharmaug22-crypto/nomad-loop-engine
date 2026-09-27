@@ -1,0 +1,119 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+.verdict {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 30px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+}
+.verdict[data-v='ship'] {
+  color: var(--ok);
+  background: var(--ok-soft);
+}
+.verdict[data-v='blocked'] {
+  color: var(--critical);
+  background: var(--critical-soft);
+}
+.verdict i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.target {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  align-items: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+.target a {
+  color: var(--ink);
+  font-weight: 600;
+}
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 16px;
+}
+.bugs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.bug {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 6px 12px;
+  align-items: start;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--panel);
+}
+.bug h3 {
+  margin: 0;
+  font-size: 14px;
+}
+.bug p {
+  margin: 0;
+  grid-column: 2 / 4;
+  color: var(--muted);
+  font-size: 12.5px;
+}
+.bug ol {
+  grid-column: 2 / 4;
+  margin: 4px 0 0;
+  padding-left: 18px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-2);
+}
+.hist {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 90px;
+  padding-top: 8px;
+}
+.hist span {
+  flex: 1;
+  min-width: 6px;
+  border-radius: 3px 3px 0 0;
+  background: var(--ok);
+  opacity: 0.85;
+}
+.hist span[data-v='blocked'] {
+  background: var(--critical);
+}
+.empty {
+  padding: 28px;
+  text-align: center;
+  color: var(--muted);
+  border: 1px dashed var(--line);
+  border-radius: var(--r-lg);
+}
+.cross {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-radius: var(--r-lg);
+  background: var(--signal-soft);
+  border: 1px solid var(--signal-glow);
+}
+.cross a {
+  color: var(--signal-ink);
+  font-weight: 700;
+}
